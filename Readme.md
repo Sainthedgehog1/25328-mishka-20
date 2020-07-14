@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Вадим Корецкий](https://up.htmlacademy.ru/adaptive/20/user/25328).
-* Наставник: `Неизвестно`.
+* Наставник: Виктория Коваленко.
 
 ---
 
