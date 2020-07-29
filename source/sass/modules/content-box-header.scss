@@ -1,0 +1,41 @@
+.content-box-header {
+  width: 100%;
+
+  @include bp-tablet {
+    display: flex;
+  }
+}
+
+.content-box-header__title {
+  display: flex;
+  width: 100%;
+  font-size: 25px;
+  font-weight: bold;
+  color: $black;
+
+  @include bp-tablet {
+    padding-top: 4px;
+    padding-left: 0px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @include bp-desktop {
+    font-size: 53px;
+    line-height: 57px;
+    padding-top: 10px;
+  }
+}
+
+.content-box-header__link {
+  display: block;
+  width: 100%;
+  color: $black;
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    opacity: 0.6;
+  }
+}

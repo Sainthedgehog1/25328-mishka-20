@@ -1,0 +1,63 @@
+.developer {
+  @include flex-center-vh;
+  width: 100%;
+  font-size: 19px;
+  line-height: 18px;
+  color: $black;
+  font-weight: bold;
+
+  @include bp-only-mobile {
+    height: 80px;
+  }
+
+  @include bp-tablet {
+    width: 33%;
+    justify-content: flex-end;
+    font-size: 19px;
+    line-height: 18px;
+    padding: $padding-usual-tab 0;
+  }
+}
+
+.developer__link {
+  &:focus {
+    opacity: 30%;
+  }
+
+  @include bp-tablet {
+    justify-content: flex-end;
+    margin: 20px -5px 0 0;
+  }
+}
+
+.developer__text {
+  padding: 3px 28px 5px 0;
+
+  @include transition;
+
+  &:hover {
+    @include transition;
+    opacity: 0.3;
+  }
+
+  @include bp-tablet {
+    padding: 6px 26px 0 0;
+  }
+
+  @include bp-desktop {
+    padding: 6px 23px 0 0;
+  }
+}
+
+.developer__logo {
+  height: 34px;
+  fill: $tiffany-light;
+
+  &:hover {
+    fill: $tiffany-medium-dark;
+  }
+}
+
+.developer__text:hover + .developer__link {
+  opacity: 0.3;
+}

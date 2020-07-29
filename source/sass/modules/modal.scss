@@ -1,0 +1,46 @@
+.modal {
+  // position: fixed;
+  position: absolute;
+  // top: 50%;
+  top: 89%;
+  left: 50%;
+  transform: translate(-50%,-100%);
+  box-sizing: border-box;
+  width: 320px;
+  height: 336px;
+  // @include position-zero;
+  // top: 1156px;
+  background: rgba(255, 255, 255, 0.9);
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 0;
+
+  @include transition;
+
+  &--show {
+    z-index: 9999;
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+
+    @include transition;
+  }
+}
+
+.modal__dialog {
+  width: 100%;
+  position: relative;
+  padding: 30px 29px;
+  border: 1px solid $grey-medium-dark;
+  background-color: $white;
+  box-shadow: 0px 5px 10px rgba(0, 1, 1, 0.25);
+
+  @include bp-tablet {
+    max-width: 566px;
+    padding: $padding-usual-tab 106px;
+
+    @include gorisontal-center;
+  }
+}

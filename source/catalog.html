@@ -17,48 +17,51 @@
       <!-- =========== -->
       <!-- Шапка сайта -->
       <!-- =========== -->
-      <header class="header">
-        <div class="header__container">
-          <!-- Логотип -->
-          <div class="header__logo">
-            <a class="header__logo-link">
+      <header class="main-header">
+        <div class="main-header__wrapper">
+          <div class="main-header__logo">
+            <a class="main-header__logo-link" href="index.html">
               <picture>
-                <img class="header__logo-img" src="https://via.placeholder.com/86x35" alt="Mishka - Интернет-магазин игрушек и предметов интерьера ручной работы" width="86" height="35">
+                <source media="(min-width: 1050px)" srcset="img/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                <img class="main-header__logo-img" src="img/logo-mobile.svg" alt="Мишка - Интернет-магазин игрушек ручной работы" width="86" height="35">
               </picture>
             </a>
           </div>
-          <!-- Навигация -->
-          <nav class="header__nav nav">
-            <button class="nav__toggle" type="button">
-              <span class="visually-hidden">Открыть меню</span>
-            </button>
-            <div class="nav__container">
-              <!-- Навигация по сайту -->
+
+          <nav class="main-header__nav nav">
+
+            <button class="nav__toggle" type="button" aria-label="Открыть меню"></button>
+
+            <!-- для js поставить класс nav__wrapper--close -->
+            <div class="nav__wrapper nav__wrapper--close">
               <ul class="nav__list nav__list--production">
                 <li class="nav__item">
-                  <a class="nav__link nav__link--catalog" href="catalog.html">
+                  <a class="nav__link nav__link--catalog">
                     Каталог товаров
                   </a>
                 </li>
-                <!--  -->
                 <li class="nav__item">
-                  <a class="nav__link nav__link--form" href="form.html">
+                  <a class="nav__link nav__link--to-form" href="form.html">
                     Вязание на заказ
                   </a>
                 </li>
               </ul>
-              <!-- Навигация пользователя -->
-              <ul class="nav__list nav__list--info">
+
+              <ul class="nav__list nav__list--addinfo">
                 <li class="nav__item">
-                  <a class="nav__link nav__link--search" href="#">
-                    <img class="nav__icon" src="https://via.placeholder.com/18x18" width="18" height="18" alt="Поиск по сайту"> <!-- SVG -->
+                  <a class="nav__link nav__link--search" href="/">
+                    <svg class="nav__icon" width="18" height="18" aria-label="Поиск по сайту" focusable="false">
+                      <use xlink:href="#icon-search"></use>
+                    </svg>
                     Поиск по сайту
                   </a>
                 </li>
-                <!--  -->
                 <li class="nav__item">
-                  <a class="nav__link nav__link--basket open-modal" href="form.html">
-                    <img class="nav__icon" src="https://via.placeholder.com/21x18" width="21" height="18" alt="Корзина"> <!-- SVG -->
+                  <a class="nav__link nav__link--basket open-modal-1" href="form.html">
+                    <svg class="nav__icon" width="21" height="18" aria-label="Корзина" focusable="false">
+                      <use xlink:href="#icon-cart"></use>
+                    </svg>
                     Корзина: пока пуста
                   </a>
                 </li>
@@ -73,141 +76,183 @@
       <main class="main-content">
         <!-- Каталог -->
         <section class="intro">
-          <div class="intro__container">
+          <div class="intro__wrapper">
+            <div class="content-add-date">
+              <ul class="content-add-date__list">
+                <li class="content-add-date__item">
+                  <a class="content-add-date____link" href="/">
+                    Новые поступления
+                  </a>
+                </li>
+                <li class="content-add-date__item">
+                  <a class="content-add-date____link" href="/">
+                    Распродажа
+                  </a>
+                </li>
+              </ul>
+              <strong class="content-add-date__delivery-info">Бесплатная доставка по России</strong>
+            </div>
+
             <h1 class="intro__title">
               Каталог товаров
             </h1>
           </div>
         </section>
         <!-- Каталог -->
-        <section class="catalog">
-          <h2 class="visually-hidden">Карточки товара</h2>
-          <ul class="catalog__list">
-            <li class="catalog__item">
-              <a class="catalog__img-container" href="#" aria-label="Зайчик-попрыгайчик">
-                <picture>
-                  <img class="catalog__img" src="https://via.placeholder.com/260x195" alt="Зайчик-попрыгайчик" width="260" height="195">
-                </picture>
-              </a>
-              <!--  -->
-              <div class="catalog__product-info">
-                <h3 class="catalog__title">
-                  <a class="catalog__title-link" href="#" aria-label="Зайчик-попрыгайчик">Зайчик-попрыгайчик</a>
-                </h3>
-                <p class="catalog__description">Рост 30 см, вес 200 г</p>
-                <div class="catalog__pricetag">
-                  <strong class="catalog__cost">1 200 руб</strong>
-                  <a class="catalog__add-to-cart open-modal" href="form.html" aria-label="Добавить в корзину">
-                    <img class="catalog__add-to-cart-icon" src="https://via.placeholder.com/21x18" width="21" height="18" alt="Положить в корзину"> <!-- SVG -->
-                  </a>
-                </div>
+        <ul class="catalog">
+
+          <li class="catalog__item">
+            <a class="catalog__img-wrapper" href="/">
+              <picture>
+                <source media="(min-width: 1050px)" srcset="img/photo-hare-desktop@1x.jpg">
+                <source media="(min-width: 768px)" srcset="img/photo-hare-tablet@1x.jpg">
+                <img class="catalog__img" src="img/photo-hare-mobile@1x.jpg" alt="Зайчик-попрыгайчик" width="260" height="195">
+              </picture>
+            </a>
+
+            <div class="catalog__product-info">
+              <h2 class="catalog__title">
+                <a class="catalog__title-link" href="/">Зайчик-попрыгайчик</a>
+              </h2>
+              <p class="catalog__description">Рост 30 см, вес 200 г</p>
+              <div class="catalog__pricetag">
+                <strong class="catalog__cost">1 200 руб.</strong>
+                <a class="catalog__add-to-cart open-modal-2" aria-label="Добавить в корзину" href="form.html">
+                  <svg class="catalog__add-to-cart-icon" width="21" height="18" aria-label="Положить в корзину" focusable="false">
+                    <use xlink:href="#icon-cart"></use>
+                  </svg>
+                </a>
               </div>
-            </li>
-            <!--  -->
-            <li class="catalog__item">
-              <a class="catalog__img-container" href="#" aria-label="Корзинка для белья">
-                <picture>
-                  <img class="catalog__img" src="https://via.placeholder.com/260x195" alt="Корзинка для белья" width="260" height="195">
-                </picture>
-              </a>
-              <!--  -->
-              <div class="catalog__product-info">
-                <h3 class="catalog__title">
-                  <a class="catalog__title-link" href="#" aria-label="Корзинка для белья">Корзинка для белья</a>
-                </h3>
-                <p class="catalog__description">Диаметр 15 см, высота 10 см</p>
-                <div class="catalog__pricetag">
-                  <strong class="catalog__cost">690 руб</strong>
-                  <a class="catalog__add-to-cart open-modal" href="form.html" aria-label="Добавить в корзину">
-                    <img class="catalog__add-to-cart-icon" src="https://via.placeholder.com/21x18" width="21" height="18" alt="Положить в корзину"> <!-- SVG -->
-                  </a>
-                </div>
+            </div>
+          </li>
+
+          <li class="catalog__item">
+            <a class="catalog__img-wrapper" href="/">
+              <picture>
+                <source media="(min-width: 1050px)" srcset="img/photo-bowl-desktop@1x.jpg">
+                <source media="(min-width: 768px)" srcset="img/photo-bowl-tablet@1x.jpg">
+                <img class="catalog__img" src="img/photo-bowl-mobile@1x.jpg" alt="Корзинка для белья" width="260" height="195">
+              </picture>
+            </a>
+
+            <div class="catalog__product-info">
+              <h2 class="catalog__title">
+                <a class="catalog__title-link" href="/">Корзинка для белья</a>
+              </h2>
+              <p class="catalog__description catalog__description--laundry-basket">Диаметр 15 см, высота 10 см</p>
+              <div class="catalog__pricetag">
+                <strong class="catalog__cost">690 руб.</strong>
+                <a class="catalog__add-to-cart open-modal-3" aria-label="Добавить в корзину" href="form.html">
+                  <svg class="catalog__add-to-cart-icon" width="21" height="18" aria-label="Положить в корзину" focusable="false">
+                    <use xlink:href="#icon-cart"></use>
+                  </svg>
+                </a>
               </div>
-            </li>
-            <!--  -->
-            <li class="catalog__item">
-              <a class="catalog__img-container" href="#" aria-label="Большая корзинка для игрушек">
-                <picture>
-                  <img class="catalog__img" src="https://via.placeholder.com/260x195" alt="Большая корзинка для игрушек" width="260" height="195">
-                </picture>
-              </a>
-              <!--  -->
-              <div class="catalog__product-info">
-                <h3 class="catalog__title">
-                  <a class="catalog__title-link" href="#" aria-label="Большая корзинка для игрушек">Большая корзинка для игрушек</a>
-                </h3>
-                <p class="catalog__description">Диаметр 30 см, высота 30 см</p>
-                <div class="catalog__pricetag">
-                  <strong class="catalog__cost">1 500 руб</strong>
-                  <a class="catalog__add-to-cart open-modal" href="form.html" aria-label="Добавить в корзину">
-                    <img class="catalog__add-to-cart-icon" src="https://via.placeholder.com/21x18" width="21" height="18" alt="Положить в корзину">
-                  </a>
-                </div>
+            </div>
+          </li>
+
+          <li class="catalog__item">
+            <a class="catalog__img-wrapper" href="/">
+              <picture>
+                <source media="(min-width: 1050px)" srcset="img/photo-toys-desktop@1x.jpg">
+                <source media="(min-width: 768px)" srcset="img/photo-toys-tablet@1x.jpg">
+                <img class="catalog__img" src="img/photo-toys-mobile@1x.jpg" alt="Большая корзинка для игрушек" width="260" height="195">
+              </picture>
+            </a>
+
+            <div class="catalog__product-info catalog__product-info--crutch">
+              <h2 class="catalog__title">
+                <a class="catalog__title-link" href="/">Большая корзинка для&nbsp;игрушек</a>
+              </h2>
+              <p class="catalog__description catalog__description--crutch">Диаметр 30 см, высота 30 см</p>
+              <div class="catalog__pricetag">
+                <strong class="catalog__cost">1 500 руб.</strong>
+                <a class="catalog__add-to-cart open-modal-4" aria-label="Добавить в корзину" href="form.html">
+                  <svg class="catalog__add-to-cart-icon" width="21" height="18" aria-label="Положить в корзину" focusable="false">
+                    <use xlink:href="#icon-cart"></use>
+                  </svg>
+                </a>
               </div>
-            </li>
-          </ul>
-        </section>
+            </div>
+          </li>
+
+        </ul>
         <!-- Процесс производства -->
         <section class="content-box video">
-          <div class="video__container">
+          <div class="video__wrapper">
             <header class="content-box-header video__header">
               <h2 class="content-box-header__title video__title">
                 Процесс производства
               </h2>
             </header>
-            <!--  -->
+
             <div class="video-box">
               <picture>
-                <img class="video-box__prewiew" src="https://via.placeholder.com/260x150" alt="Процесс производства" width="260" height="150">
+                <source media="(min-width: 1050px)" srcset="img/video-desktop@1x.jpg">
+                <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg">
+                <img class="video-box__prewiew" src="img/video-mobile@1x.jpg" alt="Процесс производства" width="260" height="150">
               </picture>
-              <button class="video-box__play" type="button">
-                <span class="visually-hidden">Запустить видео</span>
-              </button>
+              <button class="video-box__play" type="button" aria-label="Запустить видео"></button>
             </div>
-            <!--  -->
-            <p class="video__description">
+
+            <p class="video-box__description">
               По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
             </p>
-            <div class="video__button-order">
-              <a class="button button--outline open-modal" href="form.html" aria-label="Сделать заказ">
+            <div class="video-box__button-order">
+              <a class="button button--outline button--crutch open-modal-5" href="form.html">
                 Сделать заказ
               </a>
             </div>
+
           </div>
         </section>
       </main>
       <!-- ============ -->
       <!-- Подвал сайта -->
       <!-- ============ -->
-      <footer class="footer">
-        <div class="footer__container">
+      <footer class="main-footer">
+        <div class="main-footer__wrapper">
+          <div class="main-footer__logo">
+            <a aria-label="Мишка - Интернет-магазин игрушек ручной работы">
+              <svg class="main-footer__logo-img" width="102" height="34" role="img">
+                <use xlink:href="#logo-footer"></use>
+              </svg>
+            </a>
+          </div>
+
           <section class="social-box">
-            <h2 class="visually-hidden">Mishka в соцсетях</h2>
+            <h2 class="visually-hidden">Мишка в соцсетях</h2>
             <ul class="social-box__list">
               <li class="social-box__item">
-                <a class="social-box__link" href="https://www.instagram.com" target="_blank" aria-label="Mishka в instagram">
-                  <img class="social-box__link-icon" src="https://via.placeholder.com/21x28" width="21" height="28" alt="instagram"> <!-- SVG -->
+                <a class="social-box__link" href="/" target="_blank" aria-label="Мишка в instagram">
+                  <svg class="social-box__link-icon" width="21" height="28" role="img">
+                    <use xlink:href="#icon-insta"></use>
+                  </svg>
                 </a>
               </li>
-              <!--  -->
               <li class="social-box__item">
-                <a class="social-box__link" href="https://facebook.com" target="_blank" aria-label="Mishka в facebook">
-                  <img class="social-box__link-icon" src="https://via.placeholder.com/21x28" width="21" height="28" alt="facebook"> <!-- SVG -->
+                <a class="social-box__link" href="/" target="_blank" aria-label="Мишка в facebook">
+                  <svg class="social-box__link-icon" width="21" height="28" role="img">
+                    <use xlink:href="#icon-fb"></use>
+                  </svg>
                 </a>
               </li>
-              <!--  -->
               <li class="social-box__item">
-                <a class="social-box__link" href="https://twitter.com" target="_blank" aria-label="Mishka в twitter">
-                  <img class="social-box__link-icon" src="https://via.placeholder.com/21x28" width="21" height="28" alt="twitter"> <!-- SVG -->
+                <a class="social-box__link" href="/" target="_blank" aria-label="Мишка в twitter">
+                  <svg class="social-box__link-icon" width="21" height="28" role="img">
+                    <use xlink:href="#icon-twitter"></use>
+                  </svg>
                 </a>
               </li>
             </ul>
-            <!-- Разработчик -->
           </section>
-          <div class="footer__developer developer">
+          <div class="main-footer__developer developer">
             <span class="developer__text">Разработано</span>
-            <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive"  aria-label="Переход на страницу HTML-academy" target="_blank">
-              <img class="developer__logo" src="https://via.placeholder.com/27x34" width="27" height="34" alt="HTML"> <!-- SVG -->
+
+            <a class="developer__link" aria-label="Переход на страницу HTML-academy" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+              <svg class="developer__logo" width="27" height="34" role="img">
+                <use xlink:href="#logo-htmlacademy"></use>
+              </svg>
             </a>
           </div>
         </div>
@@ -217,36 +262,37 @@
       <!-- ============== -->
       <!-- Модальное окно -->
       <!-- ============== -->
-    <section class="modal">
-      <div class="modal__container">
-        <form class="size-form" action="https://echo.htmlacademy.ru" method="post">
-          <h2 class="size-form__title">
-            Добавить в корзину
-          </h2>
-          <fieldset class="size-form__item">
-            <legend class="size-form__item-title">Выберите размер:</legend>
-            <div class="size-form__item-element-box">
-              <label class="size-form__item-element">
-                <input class="size-form__radio-input" type="radio" name="size" value="size-s" checked>
-                <span class="size-form__item-element-value">s</span>
-              </label>
-              <!--  -->
-              <label class="size-form__item-element">
-                <input class="size-form__radio-input" type="radio" name="size" value="size-m">
-                <span class="size-form__item-element-value">m</span>
-              </label>
-              <!--  -->
-              <label class="size-form__item-element">
-                <input class="size-form__radio-input" type="radio" name="size" value="size-l">
-                <span class="size-form__item-element-value">l</span>
-              </label>
-            </div>
-          </fieldset>
-          <button class="button button--mod" type="button">Добавить</button>
-        </form>
+      <div class="modal">
+        <div class="modal__dialog">
+
+          <form class="order-form" action="https://echo.htmlacademy.ru" method="get">
+            <strong class="order-form__title">
+              Добавить в корзину
+            </strong>
+            <fieldset class="order-form__item">
+              <legend class="order-form__item-title">Выберите размер:</legend>
+
+              <div class="order-form__item-element-box">
+                <label class="order-form__item-element">
+                  <input class="order-form__radio-input" type="radio" name="size" value="size-s">
+                  <span class="order-form__item-element-value">s</span>
+                </label>
+                <label class="order-form__item-element">
+                  <input class="order-form__radio-input" type="radio" name="size" value="size-m">
+                  <span class="order-form__item-element-value">m</span>
+                </label>
+                <label class="order-form__item-element">
+                  <input class="order-form__radio-input" type="radio" name="size" value="size-l">
+                  <span class="order-form__item-element-value">l</span>
+                </label>
+              </div>
+
+            </fieldset>
+            <button class="button button--green" type="button">Добавить</button>
+          </form>
+        </div>
       </div>
-    </section>
-    <!-- <script src="js/script.min.js"></script> -->
-    <script src="js/script.js"></script>
+    <!-- <script src="../js/script.min.js"></script> -->
+    <script src="../js/main.js"></script>
   </body>
 </html>

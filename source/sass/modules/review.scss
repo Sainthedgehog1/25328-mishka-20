@@ -1,0 +1,94 @@
+.review {
+  position: relative;
+  width: 100%;
+  padding-bottom: 44px;
+  padding-top: 25px;
+
+  @include bp-tablet {
+    min-height: 457px;
+    max-width: $bp-tab;
+
+    @include gorisontal-center;
+    margin-bottom: 48px;
+    padding-top: 80px;
+    background: url("../img/review@1x.jpg") no-repeat 0 0;
+
+    @include bp-retina-2x {
+      background: url("../img/review@1x.jpg") no-repeat 0 0;
+      background-size: 350px auto;
+    }
+  }
+
+  @include bp-desktop {
+    max-width: $bp-desk-small;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 174px;
+    padding-right: 0;
+    padding-top: 68px;
+  }
+}
+
+.review__blockquote {
+  display: flex;
+  flex-direction: column;
+}
+
+.review__text {
+  margin: 0;
+  padding: 14px 0 34px;
+
+  @include bp-tablet {
+    font-size: 17px;
+    padding: 38px 0 60px;
+  }
+
+  @include bp-desktop {
+    padding: 36px 0 42px 1px;
+  }
+}
+
+.review__author {
+  display: flex;
+  width: 100%;
+  padding: 0 0 6px;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: bold;
+  font-style: normal;
+  color: $black;
+
+  @include bp-tablet {
+    padding: 0 0 4px;
+    width: 50%;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @include bp-desktop {
+    padding: 2px 0 2px;
+    font-size: 17px;
+    line-height: 24px;
+  }
+}
+
+.review__link {
+  color: $black;
+  font-size: 17px;
+  line-height: 24px;
+  text-decoration: none;
+  color: $black-medium-light;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $tiffany-medium-dark;
+  }
+
+  @include bp-tablet {
+    display: flex;
+    width: 50%;
+    font-size: 17px;
+    line-height: 30px;
+  }
+}

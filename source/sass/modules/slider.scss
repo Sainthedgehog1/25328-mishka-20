@@ -1,0 +1,88 @@
+.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 4px;
+}
+
+.slider__item {
+  width: 100%;
+}
+
+.slider__control {
+  display: flex;
+  width: 100%;
+  padding: 32px 0 34px;
+
+  @include bp-tablet {
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+    padding: 0;
+    width: 175px;
+  }
+}
+
+.slider__control-link {
+  width: 50%;
+  height: 52px;
+  float: left;
+  background-color: $white;
+  text-decoration: none;
+  border: 1px solid $white-medium-dark;
+
+  &--back {
+    background-image: url("../img/icon-left-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: 47% 50%;
+    background-size: auto 53%;
+    border-right: none;
+
+    &:hover,
+    &:active {
+      opacity: 0.6;
+    }
+
+    &:focus {
+      opacity: 0.3;
+    }
+  }
+
+  &--forward {
+    background-image: url("../img/icon-right-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: 47% 50%;
+    background-size: auto 53%;
+
+    &:hover,
+    &:active {
+      opacity: 0.6;
+    }
+
+    &:focus {
+      opacity: 0.3;
+    }
+  }
+
+  @include bp-tablet {
+    background-position: 50% 48%;
+    background-size: auto 50%;
+    border: none;
+  }
+}
+
+.slider__button {
+  @include bp-tablet {
+    position: absolute;
+    top: 79px;
+    right: 50px;
+    padding: 25px 0 23px;
+    width: 175px;
+    font-size: 17px;
+  }
+
+  @include bp-desktop {
+    top: 79px;
+    right: 0;
+  }
+}

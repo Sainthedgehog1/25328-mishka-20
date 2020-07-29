@@ -1,0 +1,50 @@
+.map-box {
+  position: relative;
+
+  @include adaptive-img-wrapper;
+  padding: 32px 0 33px;
+  text-align: center;
+
+  &::after {
+    position: absolute;
+    top: 34%;
+    left: 43%;
+    content: "";
+    display: block;
+    width: 67px;
+    height: 100px;
+    background: url("../img/icon-map-pin.svg") no-repeat center;
+    background-size: contain;
+
+    @include bp-tablet {
+      left: 47.3%;
+      top: 30.7%;
+    }
+
+    @include bp-desktop {
+      top: 32%;
+      left: 45.3%;
+    }
+  }
+
+  @include bp-tablet {
+    max-width: 768px;
+    padding: 28px 0 46px;
+  }
+
+  @include bp-desktop {
+    padding: 0;
+    width: 527px;
+    height: 458px;
+  }
+}
+
+.map-box__img {
+  @include adaptive-img;
+  margin: 0 auto;
+
+  @include bp-desktop {
+    min-width: 527px;
+    min-height: 457px;
+  }
+}
