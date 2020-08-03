@@ -1,16 +1,10 @@
 .modal {
-  // position: fixed;
-  position: absolute;
-  // top: 50%;
-  top: 89%;
-  left: 50%;
-  transform: translate(-50%,-100%);
-  box-sizing: border-box;
-  width: 320px;
-  height: 336px;
-  // @include position-zero;
-  // top: 1156px;
-  background: rgba(255, 255, 255, 0.9);
+  position: fixed;
+  top: 25vh;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background: $white-09;
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
@@ -29,17 +23,16 @@
   }
 }
 
-.modal__dialog {
+.modal__container {
   width: 100%;
-  position: relative;
-  padding: 30px 29px;
+  padding: 30px 29px 46px;
   border: 1px solid $grey-medium-dark;
   background-color: $white;
-  box-shadow: 0px 5px 10px rgba(0, 1, 1, 0.25);
+  box-shadow: 0px 5px 10px $black-025;
 
   @include bp-tablet {
-    max-width: 566px;
-    padding: $padding-usual-tab 106px;
+    max-width: 568px;
+    padding: 37px 105px 46px;
 
     @include gorisontal-center;
   }

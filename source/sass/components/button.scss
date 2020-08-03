@@ -26,19 +26,8 @@
     color: $black-light-extra;
   }
 
-  @include bp-tablet {
-    padding: 25px 25px 23px 23px;
-    font-size: 17px;
-  }
-
-  @include bp-desktop {
-    padding: 25px 23px 23px 23px;
-    font-size: 17px;
-  }
-
   &--modal-form {
-    margin-bottom: 16px;
-    padding: 24px 0 24px;
+    padding: 26px 0 22px;
     font-size: 17px;
     background-color: $tiffany-light-extra;
     border: 2px solid $tiffany-light-extra;
@@ -54,10 +43,23 @@
   }
 
   &--crutch {
-    font-size: 17px;
 
     @include bp-tablet {
       padding: 25px 23px 23px;
     }
+  }
+
+  @include bp-tablet {
+    padding: 24px;
+    font-size: 17px;
+
+    &--modal-form {
+      margin-left: 3px;
+      width: 98.2%;
+    }
+  }
+
+  @include bp-desktop {
+    font-size: 17px;
   }
 }

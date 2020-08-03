@@ -37,14 +37,14 @@
 }
 
 .product-info__parameter {
-  min-width: 82px;
+  min-width: 37.6%;
 
   @include bp-tablet {
-    min-width: 70px;
+    min-width: 33.2%;
   }
 
   @include bp-desktop {
-    min-width: 68px;
+    min-width: 33.5%;
   }
 }
 

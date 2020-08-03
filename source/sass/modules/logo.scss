@@ -1,0 +1,19 @@
+.logo {
+  margin-top: 22px;
+  width: 86px;
+  height: 35px;
+
+  @include bp-tablet {
+    & {
+      width: 113px;
+      height: 46px;
+      margin-top: 0;
+    }
+  }
+  @include bp-desktop {
+    & {
+      width: 149px;
+      height: 72px;
+    }
+  }
+}

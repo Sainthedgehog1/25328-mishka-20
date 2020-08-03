@@ -1,20 +1,32 @@
 "use strict";
+/* ============== */
 /* mobile navigation */
-document.querySelector(".nav__wrapper").classList.add("nav__wrapper--close");
-document.querySelector(".nav__toggle").classList.add("nav__toggle--show");
-function classToggle() {
-  this.classList.toggle('nav__toggle--close');
-  document.querySelector('.nav__wrapper').classList.toggle('nav__wrapper--close');
-  document.querySelector('.nav__wrapper').classList.toggle('nav__wrapper--show');
-}
-document.querySelector('.nav__toggle').addEventListener('click', classToggle);
+/* ============== */
+var navMain = document.querySelector('.main-nav');
+var navToggle = document.querySelector('.main-nav__toggle');
 
-/* modal window open-modal*/
-var link2 = document.querySelector(".open-modal");
+navMain.classList.remove('main-nav--nojs');
+navMain.classList.remove('main-nav--opened');
+navMain.classList.add('main-nav--closed');
+
+navToggle.addEventListener('click', function() {
+  if (navMain.classList.contains('main-nav--closed')) {
+    navMain.classList.remove('main-nav--closed');
+    navMain.classList.add('main-nav--opened');
+  } else {
+    navMain.classList.add('main-nav--closed');
+    navMain.classList.remove('main-nav--opened');
+  }
+});
+/* ============== */
+/* Модальное окно */
+/* ============== */
+var overlay = document.querySelector(".modal-overlay");
+var openModal = document.querySelector(".open-modal");
 var popup = document.querySelector(".modal");
-var close = popup.querySelector(".modal__close");
-link2.addEventListener("click", function (evt) {
+openModal.addEventListener("click", function (evt) {
   evt.preventDefault();
+  overlay.style.display = "block";
   popup.classList.toggle("modal--show");
 });
 window.addEventListener("keydown", function (evt) {
@@ -22,6 +34,7 @@ window.addEventListener("keydown", function (evt) {
     evt.preventDefault();
     if (popup.classList.contains("modal--show")) {
       popup.classList.remove("modal--show");
+      overlay.style.display = "";
     }
   }
 });

@@ -27,6 +27,8 @@
   padding-bottom: 21px;
 
   @include bp-tablet {
+    padding-top: 11px;
+    padding-bottom: 20px;
     font-size: 17px;
   }
 }
@@ -38,9 +40,12 @@
 }
 
 .order-form__item-element {
-  @include flex-center-vh;
   width: 31.4%;
   height: 52px;
+
+  @include bp-tablet {
+    width: 31.6%;
+  }
 }
 
 .order-form__radio-input {
@@ -59,6 +64,22 @@
   cursor: pointer;
 
   @include transition;
+
+  &:hover,
+  &:focus {
+    border-color: $grey-medium;
+    outline: none;
+  }
+
+  @include bp-tablet {
+    &--s {
+      margin-left: 3px;
+    }
+
+    &--l {
+      margin-left: -3px;
+    }
+  }
 }
 
 .order-form__radio-input:checked + .order-form__item-element-value {

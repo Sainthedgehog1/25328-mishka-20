@@ -21,17 +21,17 @@
 /* Components */
 /* ========== */
 @import "components/button";
+@import "components/overlay";
 
 /* ======= */
 /* Modules */
 /* ======= */
 // index.html header
-@import "modules/main-header";
-@import "modules/nav";
+@import "modules/logo";
+@import "modules/main-nav";
 // index.html content
 @import "modules/main-content";
 @import "modules/promo";
-@import "modules/content-add-date";
 @import "modules/catalog-product-wrapper";
 @import "modules/catalog-product-type";
 @import "modules/content-box";
