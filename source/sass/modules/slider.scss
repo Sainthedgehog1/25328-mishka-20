@@ -12,7 +12,7 @@
 .slider__control {
   display: flex;
   width: 100%;
-  padding: 32px 0 34px;
+  padding: 33px 0 34px;
 
   @include bp-tablet {
     position: absolute;
@@ -35,7 +35,7 @@
     background-image: url("../img/icon-left-arrow.svg");
     background-repeat: no-repeat;
     background-position: 47% 50%;
-    background-size: auto 53%;
+    background-size: auto 52%;
     border-right: none;
 
     &:hover,
@@ -52,7 +52,7 @@
     background-image: url("../img/icon-right-arrow.svg");
     background-repeat: no-repeat;
     background-position: 47% 50%;
-    background-size: auto 53%;
+    background-size: auto 52%;
 
     &:hover,
     &:active {
@@ -65,24 +65,25 @@
   }
 
   @include bp-tablet {
-    background-position: 50% 48%;
+    background-position: 50% 49%;
     background-size: auto 50%;
     border: none;
+  }
+
+  @include bp-desktop {
+    background-position: 50% 48%;
   }
 }
 
 .slider__button {
   @include bp-tablet {
     position: absolute;
-    top: 79px;
+    top: 80px;
     right: 50px;
-    padding: 25px 0 23px;
     width: 175px;
-    font-size: 17px;
   }
 
   @include bp-desktop {
-    top: 79px;
     right: 0;
   }
 }

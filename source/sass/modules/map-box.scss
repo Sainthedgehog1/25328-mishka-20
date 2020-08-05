@@ -1,9 +1,6 @@
 .map-box {
   position: relative;
-
-  @include adaptive-img-wrapper;
-  padding: 32px 0 33px;
-  text-align: center;
+  padding: 33px 0 32px;
 
   &::after {
     position: absolute;
@@ -35,16 +32,22 @@
   @include bp-desktop {
     padding: 0;
     width: 527px;
-    height: 458px;
+    height: 457px;
   }
 }
 
 .map-box__img {
+
   @include adaptive-img;
-  margin: 0 auto;
+
+  @include bp-tablet {
+    width: 100%;
+  }
 
   @include bp-desktop {
-    min-width: 527px;
-    min-height: 457px;
+    /*min-width: 527px;*/
+    /*min-height: 457px;*/
+    width: 100%;
+    height: auto;
   }
 }

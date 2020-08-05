@@ -91,9 +91,9 @@
 }
 
 .product-week__photo {
-  display: flex;
+  // display: flex;
+  // justify-content: center;
   padding: 28px 0 0;
-  justify-content: center;
 
   @include adaptive-img-wrapper;
 

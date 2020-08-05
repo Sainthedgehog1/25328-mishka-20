@@ -1,7 +1,7 @@
 .button {
   display: block;
   width: 100%;
-  padding: 25px 0 23px;
+  padding: 24px 0 24px;
   text-align: center;
   color: $black-medium-light;
   font-size: 18px;
@@ -61,5 +61,13 @@
 
   @include bp-desktop {
     font-size: 17px;
+  }
+
+  &--contacts {
+    padding: 24px 25px 24px 24px;
+
+    @include bp-tablet {
+      padding: 24px 25px 24px 23px;
+    }
   }
 }
