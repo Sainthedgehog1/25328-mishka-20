@@ -41,7 +41,7 @@
   @include bp-desktop {
     order: -1;
     flex-basis: 175px;
-    padding: 5px 57px 0 46px;
+    padding: 3px 57px 0 46px;
   }
 }
 
@@ -93,19 +93,25 @@
 .product-week__photo {
   // display: flex;
   // justify-content: center;
-  padding: 28px 0 0;
+  margin: 28px 0 9px;
 
-  @include adaptive-img-wrapper;
+  // @include adaptive-img-wrapper;
+  min-width: 260px;
+  min-height: 315px;
+
+  background-color: $white-medium;
 
   @include bp-tablet {
     position: absolute;
     top: 0;
     /*right: -100%;*/
     right: -333px;
-    padding-top: 51px;
-    max-width: 333px;
-    height: 403px;
-    margin: 0;
+    // padding-top: 51px;
+    // max-width: 333px;
+    // height: 403px;
+    margin-top: 51px;
+    min-width: 333px;
+    min-height: 404px;
   }
 
   @include bp-desktop {
@@ -117,30 +123,8 @@
   }
 }
 
-.product-week__bg-photo {
-  display: none;
-
-  @include bp-tablet {
-
-    @include adaptive-img-wrapper;
-
-    display: flex;
-    justify-content: center;
-    margin: 51px 0 0;
-    max-width: 333px;
-    height: 403px;
-    background-color: #f1f1f1;
-  }
-
-  @include bp-desktop {
-    margin-top: -118px;
-    padding: 0;
-    max-width: 525px;
-    height: 636px;
-  }
-}
-
 .product-week__img {
+  display: block;
   @include adaptive-img;
 
   @include bp-tablet {
