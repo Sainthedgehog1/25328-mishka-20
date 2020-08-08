@@ -124,8 +124,15 @@
 }
 
 .product-week__img {
+  position: relative;
   display: block;
   @include adaptive-img;
+
+  &:before {
+    content: "";
+    display: block;
+    padding-top: 117%;
+  }
 
   @include bp-tablet {
     min-width: 333px;
@@ -155,6 +162,6 @@
   }
 
   @include bp-desktop {
-    padding: 91px 57px 33px 175px;
+    padding: 91px 57px 33px 176px;
   }
 }

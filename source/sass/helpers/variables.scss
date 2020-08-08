@@ -4,11 +4,13 @@ $white: #ffffff;
 $white-medium-light: #f9f9f9;
 $white-medium: #f1f1f1;
 $white-medium-dark: #ececec;
-$white-dark: #ededed;/*opacity: 0.1; #444444;*/
+$white-dark: #ededed;
+/*opacity: 0.1; #444444;*/
 $grey-light-extra: #e8e8e8;
 $grey-light: #e5e5e5;
 $grey: #cccccc;
-$grey-medium: #c7c7c7;/*opacity: 0.3; #444444;*/
+$grey-medium: #c7c7c7;
+/*opacity: 0.3; #444444;*/
 $grey-medium-dark: #c6c6c6;
 
 $black-light-extra: #8d8d8d;
@@ -19,13 +21,16 @@ $black-06: rgba(0, 0, 0, 0.6);
 $black-03: rgba(0, 0, 0, 0.3);
 $black-025:rgba(0, 1, 1, 0.25);
 $black-01: rgba(0, 0, 0, 0.1);
+$black-01-hex: #d9d9d9;
 $black: #000000;
 
 $tiffany-light-extra: #64d1bc;
 $tiffany-light: #63d1bb;
 $tiffany-light-medium: #62d1ba;
 $tiffany: #61d3bc;
+$tiffany-medium-light: #59d5bc;
 $tiffany-medium: #56c3b2;
+$tiffany-medium-dark-01: rgba(70, 193, 174, 0.1);
 $tiffany-medium-dark: #46c1ae;
 $tiffany-dark: #149080;
 
@@ -39,4 +44,4 @@ $bp-only-mob: 767px;
 $bp-tab: 768px;
 $bp-desk-big: 1150px;
 $bp-desk-small: 1050px;
-$retina-dppx: 1.5dppx;
+$retina-dppx: 2dppx;

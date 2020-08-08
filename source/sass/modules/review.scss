@@ -15,8 +15,8 @@
     background: url("../img/review@1x.jpg") no-repeat 0 1px;
 
     @include bp-retina-2x {
-      background: url("../img/review@1x.jpg") no-repeat 0 0;
-      background-size: 350px auto;
+      background: url("../img/review@2x.jpg") no-repeat 0 1px;
+      // background-size: 350px auto;
     }
   }
 

@@ -1,10 +1,16 @@
 .map-box {
   position: relative;
-  padding: 33px 0 32px;
+  margin: 33px 0 41px;
+  background-color: $white-medium;
+
+  // background-image: url("img/map-mobile@1x.jpg");
+  // background-color: $white-medium;
+  // background-position: center top;
+  // background-repeat: no-repeat;
 
   &::after {
     position: absolute;
-    top: 34%;
+    top: 32%;
     left: 43%;
     content: "";
     display: block;
@@ -25,24 +31,37 @@
   }
 
   @include bp-tablet {
-    max-width: 768px;
-    padding: 28px 0 46px;
+    /*max-width: 768px;*/
+    margin: 28px 0 55px;
   }
 
   @include bp-desktop {
-    padding: 0;
+    margin: 0;
     width: 527px;
     height: 457px;
   }
 }
 
 .map-box__img {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
 
-  @include adaptive-img;
+  &:before {
+    content: "";
+    display: block;
+    padding-top: 138%;
+
+    @include bp-tablet {
+      padding-top: 57%;
+    }
+  }
 
   @include bp-tablet {
-    width: 100%;
+    min-height: 457px;
   }
+
 
   @include bp-desktop {
     /*min-width: 527px;*/

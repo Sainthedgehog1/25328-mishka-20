@@ -1,11 +1,11 @@
 .button {
   display: block;
   width: 100%;
-  padding: 24px 0 24px;
+  padding: 14px 0;
   text-align: center;
   color: $black-medium-light;
   font-size: 18px;
-  line-height: 0;
+  line-height: 20px;
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
@@ -15,42 +15,19 @@
 
   @include transition;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $black-medium-light;
     color: $white;
   }
 
-  &:focus,
   &:active {
     background-color: $black-medium-light;
     color: $black-light-extra;
   }
 
-  &--modal-form {
-    padding: 26px 0 22px;
-    font-size: 17px;
-    background-color: $tiffany-light-extra;
-    border: 2px solid $tiffany-light-extra;
-    color: $white;
-
-    &:hover,
-    &:focus,
-    &:active {
-      background-color: $white;
-      border: 2px solid $tiffany-light-extra;
-      color: $tiffany-light-extra;
-    }
-  }
-
-  &--crutch {
-
-    @include bp-tablet {
-      padding: 25px 23px 23px;
-    }
-  }
-
   @include bp-tablet {
-    padding: 24px;
+    padding: 14px 24px;
     font-size: 17px;
 
     &--modal-form {
@@ -64,10 +41,40 @@
   }
 
   &--contacts {
-    padding: 24px 25px 24px 24px;
+    padding: 14px 25px 14px 24px;
 
     @include bp-tablet {
-      padding: 24px 25px 24px 23px;
+      padding: 14px 25px 14px 23px;
+    }
+
+    @include bp-desktop {
+      padding: 14px 24px;
+    }
+  }
+
+  &--modal-form {
+    padding: 14px 25px 14px 23px;
+    font-size: 17px;
+    background-color: $tiffany-light-extra;
+    border: 2px solid $tiffany-light-extra;
+    color: $white;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $white;
+      border: 2px solid $tiffany-light-extra;
+      color: $tiffany-light-extra;
+    }
+
+    @include bp-tablet {
+      padding: 16px 25px 12px 24px;
+    }
+  }
+
+  &--crutch {
+    @include bp-desktop {
+      padding: 14px 24px 14px 22px;
     }
   }
 }

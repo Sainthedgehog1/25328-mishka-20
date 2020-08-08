@@ -54,19 +54,20 @@
   text-decoration: none;
   background-color: $tiffany-light;
 
-  &:hover {
+  &:hover,
+  &:focus,
+  &:active {
     text-decoration: none;
     height: 114px;
     margin-top: -5px;
     padding-bottom: 5px;
     transition: margin-top 200ms ease-in-out, heoght 200ms ease-in-out;
+    background-color: $tiffany-medium-light;
   }
 
-  &:focus,
-  &:active {
-    text-decoration: none;
-    opacity: 0.3;
-  }
+  // &:active {
+  //   background-color: $tiffany-medium-light;
+  // }
 
   &::after {
     position: absolute;
@@ -122,4 +123,15 @@
 
 .catalog-product-type__item:nth-child(even) .catalog-product-type__link {
   background-color: $tiffany-medium;
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+    height: 114px;
+    margin-top: -5px;
+    padding-bottom: 5px;
+    transition: margin-top 200ms ease-in-out, heoght 200ms ease-in-out;
+    background-color: $tiffany-medium-dark;
+  }
 }

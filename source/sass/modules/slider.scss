@@ -39,11 +39,11 @@
     border-right: none;
 
     &:hover,
-    &:active {
+    &:focus {
       opacity: 0.6;
     }
 
-    &:focus {
+    &:active {
       opacity: 0.3;
     }
   }
@@ -76,10 +76,13 @@
 }
 
 .slider__button {
+  padding: 14px 23px 14px 24px;
+
   @include bp-tablet {
     position: absolute;
     top: 80px;
     right: 50px;
+    padding: 14px 24px;
     width: 175px;
   }
 

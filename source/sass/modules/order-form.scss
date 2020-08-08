@@ -7,6 +7,17 @@
   text-transform: uppercase;
   text-align: center;
 
+  &--modal {
+    padding-left: 4px;
+    width: 152px;
+    text-align: left;
+    line-height: 31px;
+
+    @include bp-tablet {
+      padding-left: 2px;
+    }
+  }
+
   @include bp-tablet {
     width: 100%;
     font-size: 30px;
@@ -25,6 +36,12 @@
   text-align: center;
   padding-top: 14px;
   padding-bottom: 21px;
+
+  &--modal {
+    @include bp-tablet {
+      padding-left: 1px;
+    }
+  }
 
   @include bp-tablet {
     padding-top: 11px;
@@ -82,6 +99,6 @@
   }
 }
 
-.order-form__radio-input:checked + .order-form__item-element-value {
+.order-form__radio-input:checked+.order-form__item-element-value {
   border: 2px solid $tiffany-light-medium;
 }

@@ -1,5 +1,6 @@
 .video-box {
   position: relative;
+  margin-top: 6px;
 
   @include flex-center-vh;
 
@@ -8,10 +9,13 @@
   }
 
   @include bp-desktop {
+    grid-column: 1/2;
+    grid-row: 1/4;
     align-items: flex-end;
     width: 682px;
     height: 455px;
     padding: 0;
+    margin: 0;
   }
 }
 
@@ -65,8 +69,10 @@
   }
 
   @include bp-desktop {
-    width: 34.5%;
-    padding: 28px 0 52px 79px;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    // width: 34.5%;
+    padding: 26px 0 50px 79px;
     border: none;
 
   }
@@ -82,9 +88,11 @@
   }
 
   @include bp-desktop {
-    width: 34.5%;
+    grid-column: 2/3;
+    grid-row: 3/4;
+    // width: 34.5%;
     border-left: none;
-    padding: 0 35px 59px 80px;
+    padding: 0 58px 59px 80px;
     border: none;
   }
 }
