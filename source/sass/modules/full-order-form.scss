@@ -5,13 +5,10 @@
   @include bp-tablet {
     padding: 20px 0 0;
   }
-
-  @include bp-desktop {
-    padding: 20px 0 0;
-  }
 }
 
 .full-order-form__wrapper {
+
   &:nth-child(2),
   &:nth-child(4),
   &:nth-child(5) {
@@ -24,9 +21,9 @@
 .full-order-form__fieldset {
   padding: 0 0 34px;
 
-  &--fullname {
-    padding-bottom: 33px;
-  }
+  // &--fullname {
+  //   padding-bottom: 33px;
+  // }
 
   &--phone {
     padding-bottom: 34px;
@@ -41,8 +38,8 @@
   }
 
   @include bp-tablet {
-    display: flex;
-    max-width: $bp-tab;
+    display: grid;
+    grid-template-columns: min-content 1fr;
 
     @include gorisontal-center;
     padding: 41px 50px 52px;
@@ -53,12 +50,12 @@
     }
 
     &--phone {
-      padding-top: 47px;
+      padding-top: 45px;
       padding-bottom: 0;
     }
 
     &--email {
-      padding-top: 6px;
+      padding-top: 8px;
       padding-bottom: 35px;
     }
 
@@ -75,7 +72,7 @@
 
   @include bp-desktop {
     max-width: $bp-desk-small;
-    padding: 55px 0 52px;
+    padding: 43px 0 48px;
 
     &--colors {
       padding-top: 46px;
@@ -117,6 +114,10 @@
   font-weight: bold;
   padding: 0 0 30px;
 
+  &--crutch {
+    padding-bottom: 29px;
+  }
+
   &::after {
     content: "";
     height: 1px;
@@ -129,7 +130,7 @@
   }
 
   &--phone {
-    padding: 0 0 19px;
+    padding: 0 0 16px;
   }
 
   &--email {
@@ -141,9 +142,10 @@
   }
 
   @include bp-tablet {
-    min-width: 166px;
-    flex-basis: 166px;
-    height: 70px;
+    min-width: 167px;
+    // flex-basis: 166px;
+    // height: 70px;
+    align-items: baseline;
     line-height: 52px;
 
     &::after {
@@ -151,8 +153,7 @@
     }
 
     &--type {
-      margin-top: -12px;
-      padding-top: 40px;
+      min-width: 165px;
     }
 
     &--color {
@@ -168,62 +169,95 @@
     }
 
     &--email {
-      padding: 0 0 15px;
+      padding: 0 0 16px;
     }
   }
 
   @include bp-desktop {
-    min-width: 174px;
-    flex-basis: 174px;
-    padding-left: 61px;
+    min-width: 175px;
+    flex-basis: 175px;
+    padding: 3px 0 0 61px;
+
+    &--type {
+      min-width: 174px;
+      padding-top: 0;
+    }
+
+    &--phone {
+      padding-top: 2px;
+    }
   }
 
   &--color {
-    min-width: 176px;
-    flex-basis: 176px;
-    padding: 31px 0 14px 60px;
+    min-width: 167px;
+    flex-basis: 167px;
+
+    // padding: 31px 0 14px 60px;
+    @include bp-desktop {
+      min-width: 175px;
+    }
   }
 
   &--fullname {
     min-width: 177px;
     flex-basis: 177px;
+
+    @include bp-tablet {
+      min-width: 167px;
+    }
+
+    @include bp-desktop {
+      min-width: 177px;
+    }
   }
 
-  &--phone {
-    padding-top: 16px;
-    padding-bottom: 0;
-  }
+  // &--phone {
+  //   padding-top: 1px;
+  //   padding-bottom: 16px;
+  // }
 
-  &--email {
-    padding-top: 17px;
-    padding-bottom: 0;
-  }
+  // &--email {
+  //   padding-top: 0;
+  //   padding-bottom: 19px;
+  // }
 
   &--comments {
-    padding: 15px 0 0 61px;
+    padding: 0 0 22px;
   }
 }
 
 .full-order-form__title-text {
-  padding: 0 25px 0 0;
+  padding: 0 23px 0 0;
 
   &--color {
-    padding: 0 18px 0 0;
+    padding: 0 16px 0 0;
   }
 
   &--fullname {
+    padding: 0 18px 0 0;
+  }
+
+  &--phone {
+    padding: 0 28px 0 0;
+  }
+
+  &--email {
     padding: 0 20px 0 0;
   }
 
+  &--comments {
+    padding: 0 21px 0 0;
+  }
+
   @include bp-tablet {
-    padding: 1px 0 0 0;
+    padding: 2px 0 0 0;
   }
 
   @include bp-desktop {
-    padding: 0 0 29px 0;
+    padding: 0;
 
     &--fullname {
-      padding: 6px 0 0 0;
+      padding: 1px 0 0 0;
     }
   }
 }
@@ -237,6 +271,7 @@
     &--colors {
       flex-direction: row;
       flex-wrap: wrap;
+      padding-right: 1px;
     }
   }
 }
@@ -262,7 +297,7 @@
   }
 
   &--fullname {
-    padding-bottom: 23px;
+    padding-bottom: 22px;
   }
 
   @include bp-tablet {
@@ -272,6 +307,7 @@
 
     &--checkbox {
       width: 50%;
+      // width: calc(50% - 1px);
 
       &:nth-child(2n) {
         padding-left: 12px;
@@ -318,7 +354,7 @@
     }
 
     &--fullname {
-      padding: 0 0 20px;
+      padding: 0 0 21px;
     }
   }
 }
@@ -358,7 +394,7 @@
     width: 50%;
     font-size: 17px;
     line-height: 30px;
-    padding: 0;
+    padding: 0 1px 0 0;
   }
 }
 
@@ -380,22 +416,27 @@
   &--radio,
   &--checkbox {
     align-items: center;
-    padding-left: 62px;
+    padding-left: 60px;
     padding-top: 5px;
     min-height: 40px;
 
     @include bp-tablet {
       min-height: 52px;
+      padding-left: 82px;
+    }
+
+    @include bp-desktop {
+      padding-top: 0;
       padding-left: 81px;
     }
   }
 
   &--checkbox {
-    padding-left: 64px;
+    padding-left: 62px;
 
     @include bp-tablet {
       min-height: 52px;
-      padding-left: 81px;
+      padding-left: 82px;
     }
 
     @include bp-desktop {
@@ -403,11 +444,41 @@
     }
   }
 
-  &--first {
+  &--checkbox-crutch {
+    padding-top: 8px;
+    padding-left: 61px;
+
+    @include bp-tablet {
+      padding-left: 81px;
+    }
+
     @include bp-desktop {
-      margin-top: -17px;
+      padding-top: 9px;
     }
   }
+
+  &--checkbox-crutch-tablet {
+    @include bp-tablet {
+      padding-top: 0;
+    }
+
+    @include bp-desktop {
+      padding-top: 7px;
+    }
+  }
+
+  &--checkbox-crutch-desktop {
+    @include bp-desktop {
+      padding-top: 10px;
+      padding-left: 82px;
+    }
+  }
+
+  // &--first {
+  //   @include bp-desktop {
+  //     margin-top: -17px;
+  //   }
+  // }
 
   &--radio::before,
   &--checkbox::before {
@@ -420,8 +491,8 @@
 
   &--checkbox::before {
     top: 3px;
-    left: -1px;
-    width: 36px;
+    left: 0;
+    width: 34px;
     height: 35px;
 
     @include bp-tablet {
@@ -432,20 +503,21 @@
   }
 
   &--radio::before {
-    top: 3px;
-    left: 0;
-    width: 36px;
-    height: 36px;
+    top: 4px;
+    left: 1px;
+    width: 34px;
+    height: 34px;
     border-radius: 50%;
 
     @include bp-tablet {
-      top: 1px;
-      width: 50px;
-      height: 50px;
+      top: 2px;
+      left: 2px;
+      width: 48px;
+      height: 48px;
     }
 
     @include bp-desktop {
-      top: 3px;
+      top: -1px;
       left: 1px;
       width: 48px;
       height: 48px;
@@ -453,14 +525,14 @@
   }
 
   &--first::before {
-    top: -5px;
+    top: -4px;
 
     @include bp-tablet {
-      top: 1px;
+      top: 2px;
     }
 
     @include bp-desktop {
-      top: 3px;
+      top: -1px;
     }
   }
 
@@ -480,7 +552,7 @@
     content: "";
     display: inline-block;
     position: absolute;
-    top: 16px;
+    top: 15px;
     left: 12px;
     width: 16px;
     height: 16px;
@@ -492,13 +564,13 @@
 
     @include bp-tablet {
       top: 17px;
-      left: 16px;
+      left: 17px;
       width: 22px;
       height: 22px;
     }
 
     @include bp-desktop {
-      top: 19px;
+      top: 15px;
       left: 15px;
     }
   }
@@ -511,7 +583,7 @@
     }
 
     @include bp-desktop {
-      top: 18px;
+      top: 14px;
       left: 16px;
     }
   }
@@ -534,7 +606,7 @@
     @include bp-tablet {
       top: 18px;
       left: 8px;
-      width: 33px;
+      width: 34px;
       height: 22px;
       background-size: 33px 22px;
     }
@@ -549,12 +621,34 @@
 
     @include bp-desktop {
       padding-top: 1px;
+      padding-right: 24px;
+    }
+  }
+
+  &--surname {
+    @include bp-tablet {
+      padding-top: 2px;
+      padding-right: 26px;
+    }
+
+    @include bp-desktop {
+      padding-right: 25px;
+    }
+  }
+
+  &--last-name {
+    @include bp-tablet {
+      padding-right: 27px;
+    }
+
+    @include bp-desktop {
+      padding-right: 26px;
     }
   }
 }
 
-.full-order-form__choice:checked + .full-order-form__value--radio::after,
-.full-order-form__choice:checked + .full-order-form__value--checkbox::after,
+.full-order-form__choice:checked+.full-order-form__value--radio::after,
+.full-order-form__choice:checked+.full-order-form__value--checkbox::after,
 .full-order-form__value--radio:focus::after,
 .full-order-form__value--checkbox:focus::after,
 .full-order-form__value--radio:active::after,
@@ -562,8 +656,8 @@
   opacity: 1;
 }
 
-// .full-order-form__choice:checked + .full-order-form__value--radio::before,
-// .full-order-form__choice:checked + .full-order-form__value--checkbox::before,
+// .full-order-form__choice:checked+.full-order-form__value--radio::before,
+// .full-order-form__choice:checked+.full-order-form__value--checkbox::before,
 // .full-order-form__value--radio:focus::before,
 // .full-order-form__value--checkbox:focus::before,
 // .full-order-form__value--radio:active::before,
@@ -574,37 +668,67 @@
 .full-order-form__text-input {
   display: flex;
   width: 100%;
-  padding: 13px 0 12px;
+  padding: 14px 0 12px;
   border: 1px solid transparent;
   border-bottom: 2px solid $black;
+  border-left: none;
+  border-right: none;
   font-size: 17px;
   line-height: 18px;
   font-weight: normal;
   color: $black-03;
+
+  &--crutch {
+    padding: 14px 0 11px;
+  }
 
   &:hover,
   &:active {
     border-bottom-color: $tiffany-light-medium;
   }
 
-  &--phone {
-    padding: 0 0 12px;
+  @include bp-tablet {
+    // padding: 15px 17px 11px;
+    padding: 14px 17px 12px 17px;
     font-size: 19px;
     line-height: 18px;
+  }
+
+  &--phone {
+    padding: 0 0 15px;
+    font-size: 17px;
+    line-height: 18px;
+
+    @include bp-tablet {
+      & {
+        font-size: 19px;
+        padding: 14px 17px;
+      }
+    }
   }
 
   &--email {
     padding: 0 0 12px;
-  }
 
-  @include bp-tablet {
-    padding: 15px 17px 11px;
-    font-size: 19px;
-    line-height: 18px;
+    @include bp-tablet {
+      padding: 13px 18px;
+    }
   }
 
   @include bp-desktop {
     padding: 14px 17px 13px;
+  }
+
+  &--fullname {
+    @include bp-tablet {
+      padding: 15px 17px 11px 16px;
+    }
+  }
+
+  &--crutch-desktop {
+    @include bp-desktop {
+      padding-top: 13px;
+    }
   }
 }
 
@@ -643,7 +767,7 @@
   display: flex;
   width: 100%;
   padding: 15px;
-  border: 2px solid $black;
+  border: 2px solid $black-medium-light;
   font-size: 17px;
   line-height: 18px;
   font-weight: normal;
@@ -653,5 +777,9 @@
   &:hover,
   &:active {
     border-color: $tiffany-light-medium;
+  }
+
+  @include bp-tablet {
+    font-size: 19px;
   }
 }

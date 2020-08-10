@@ -112,21 +112,3 @@
     margin-right: 0;
   }
 }
-
-.contacts-info__button-box {
-  padding: 0 2em;
-
-  @include bp-tablet {
-    width: 290px;
-    margin: 0 auto;
-  }
-
-  @include bp-desktop {
-    grid-row: 3/4;
-    justify-self: end;
-    width: 100%;
-    margin: 0 89px 1px 0;
-    align-self: flex-end;
-    max-width: 290px;
-  }
-}

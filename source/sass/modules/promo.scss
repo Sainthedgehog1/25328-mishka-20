@@ -26,7 +26,7 @@
 
   @include bp-tablet {
     min-height: 627px;
-    max-width: $bp-tab;
+    // max-width: $bp-tab;
 
     @include gorisontal-center;
     background-image: url("../img/hero-tablet@1x.jpg");
@@ -100,15 +100,17 @@
   }
 }
 
-// catalog
+// page-catalog, page-form
 
-.page-catalog .promo {
+.page-catalog .promo,
+.page-form .promo {
   @include bp-tablet {
     border-top: 1px solid $black-01-hex;
   }
 }
 
-.page-catalog .promo__wrapper {
+.page-catalog .promo__wrapper,
+.page-form .promo__wrapper {
   margin-left: auto;
   margin-right: auto;
   padding-left: 3px;
@@ -134,7 +136,8 @@
   }
 }
 
-.page-catalog .promo__title {
+.page-catalog .promo__title,
+.page-form .promo__title {
   margin-left: -5px;
   padding: 72px 10% 0 10.25%;
   font-weight: bold;
@@ -159,7 +162,21 @@
   }
 }
 
-.page-catalog .promo__title-item {
+.page-form .promo__title {
+  margin-left: -3px;
+
+  @include bp-tablet {
+    padding: 99px 10% 0;
+  }
+
+  @include bp-desktop {
+    margin-left: auto;
+    padding: 101px 10% 0;
+  }
+}
+
+.page-catalog .promo__title-item,
+.page-form .promo__title-item {
   display: flex;
   justify-content: center;
   margin-left: -7px;

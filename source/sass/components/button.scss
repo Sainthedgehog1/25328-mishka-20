@@ -77,4 +77,26 @@
       padding: 14px 24px 14px 22px;
     }
   }
+
+  &--slider {
+    padding: 14px 23px 14px 24px;
+
+    @include bp-tablet {
+      position: absolute;
+      top: 80px;
+      right: 50px;
+      padding: 14px 24px;
+      width: 175px;
+    }
+
+    @include bp-desktop {
+      right: 0;
+    }
+  }
+}
+
+.page-form .button {
+  @include bp-tablet {
+    padding: 14px 24px 14px 22px;
+  }
 }
