@@ -9,14 +9,17 @@
   <meta name="keywords"
     content="mishka, интернет-магазин, ручная работа, экологические чистые материалы, скандинавский стиль, аксессуары">
   <title>Mishka - Интернет-магазин игрушек и предметов интерьера ручной работы</title>
-  <link rel="shortcut icon" href="img/icon-bear.png" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon.icon" type="image/x-icon" size="32x32">
   <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
-  <!-- <link rel="stylesheet" href="css/style.min.css"> -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
+<!--  -->
 
 <body>
+  <div class="hidden">
+    <include src="build/img/sprite.svg"></include>
+  </div>
   <!-- =========== -->
   <!-- Шапка сайта -->
   <!-- =========== -->
@@ -78,7 +81,7 @@
         </ul>
         <!--  Доставка -->
         <div class="main-nav__item main-nav__item--delivery">
-          <a class="main-nav__link main-nav__link--delivery" href="#">Бесплатная доставка по России</a>
+          <p class="main-nav__delivery">Бесплатная доставка по России</p>
         </div>
       </div>
     </nav>
@@ -320,7 +323,6 @@
 
   </footer>
   <!-- <script src="js/script.min.js"></script> -->
-  <script src="js/main.js"></script>
 </body>
 
 </html>

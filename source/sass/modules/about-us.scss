@@ -1,8 +1,8 @@
 .about-us {
   background-image: url("../img/bg-zigzag-line.svg");
   background-repeat: repeat-x;
-  background-size: 100% 8px;
-  background-position: 0 3px;
+  background-size: 100%;
+  background-position: 0 4px;
 
   @include bp-tablet {
     display: flex;
@@ -10,7 +10,7 @@
     /*max-width: $bp-tab;*/
     max-width: 100%;
     padding-bottom: 26px;
-    background-size: 100% 16px;
+    background-position: 0 3px;
 
     @include gorisontal-center;
   }
@@ -18,7 +18,7 @@
   @include bp-desktop {
     max-width: $bp-desk-small;
     padding: 44px 175px 33px;
-    background-size: auto 21px;
+    background-position: 0 4px;
   }
 }
 

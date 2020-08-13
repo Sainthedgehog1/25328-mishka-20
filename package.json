@@ -3,23 +3,34 @@
   "private": true,
   "description": "Личный проект «Мишка» от HTML Academy",
   "devDependencies": {
-    "@htmlacademy/editorconfig-cli": "1.0.0",
-    "autoprefixer": "9.8.4",
-    "browser-sync": "^2.26.10",
-    "gulp": "4.0.2",
-    "gulp-plumber": "1.2.1",
-    "gulp-postcss": "8.0.0",
-    "gulp-sass": "4.1.0",
-    "gulp-sourcemaps": "2.6.5",
-    "stylelint": "13.6.1",
-    "stylelint-config-htmlacademy": "0.1.4"
+    "@htmlacademy/editorconfig-cli": "1.x",
+    "autoprefixer": "9.8.x",
+    "browser-sync": "^2.26.12",
+    "del": "^5.1.0",
+    "gulp": "4.0.x",
+    "gulp-csso": "^4.0.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-plumber": "1.2.x",
+    "gulp-postcss": "8.0.x",
+    "gulp-posthtml": "^3.0.5",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "4.1.x",
+    "gulp-sourcemaps": "2.6.x",
+    "gulp-svgstore": "^7.0.1",
+    "gulp-uglify": "^3.0.2",
+    "gulp-webp": "^4.0.1",
+    "posthtml": "^0.13.1",
+    "posthtml-include": "^1.4.3",
+    "stylelint": "13.6.x",
+    "stylelint-config-htmlacademy": "0.1.x"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "test": "npm run editorconfig && npm run stylelint",
-    "build": "gulp styles",
-    "start": "gulp"
+    "build": "gulp build",
+    "start": "gulp start"
   },
   "browserslist": [
     "last 2 versions",
@@ -32,9 +43,12 @@
     "source/*.html",
     "source/js/**/*.js",
     "source/img/**/*.svg",
-    "source/sass/**/*.scss"
+    "source/sass/**/*.{sass,scss}"
   ],
   "engines": {
     "node": "12.18.2"
+  },
+  "dependencies": {
+    "npm-check-updates": "^7.1.0"
   }
 }

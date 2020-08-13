@@ -99,4 +99,8 @@
   @include bp-tablet {
     padding: 14px 24px 14px 22px;
   }
+
+  @include bp-desktop {
+    padding: 14px 24px;
+  }
 }

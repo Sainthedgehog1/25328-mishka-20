@@ -5,11 +5,12 @@
 
   @include bp-tablet {
     & {
-      width: 113px;
+      width: 114px;
       height: 46px;
       margin-top: 0;
     }
   }
+
   @include bp-desktop {
     & {
       width: 149px;

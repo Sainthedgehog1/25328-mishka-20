@@ -85,6 +85,16 @@
   &--interior::after {
     background: url("../img/icon-interior.svg") no-repeat 11px 23px;
     background-size: 40px 62px;
+    opacity: 0.5;
+
+    &--interior::after:hover,
+    &--interior::after:focus {
+      opacity: 0.7;
+    }
+
+    &--interior:active::after {
+      opacity: 0.3;
+    }
 
     @include bp-tablet {
       background-position: 10px 30px;
@@ -94,6 +104,7 @@
   &--toy::after {
     background: url("../img/icon-toy.svg") no-repeat 0 21px;
     background-size: 60px 60px;
+    opacity: 0.5;
 
     @include bp-tablet {
       background-position: 0 33px;

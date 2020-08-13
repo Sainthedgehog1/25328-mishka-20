@@ -86,9 +86,9 @@
     }
 
     &--email {
-      padding-top: 6px;
+      padding-top: 20px;
       padding-right: 175px;
-      padding-bottom: 36px;
+      padding-bottom: 50px;
     }
 
     &--fullname {
@@ -186,6 +186,10 @@
     &--phone {
       padding-top: 2px;
     }
+
+    &--email {
+      padding: 3px 0 0 62px;
+    }
   }
 
   &--color {
@@ -258,6 +262,10 @@
 
     &--fullname {
       padding: 1px 0 0 0;
+    }
+
+    &--comments {
+      padding: 2px 0 0 62px;
     }
   }
 }
@@ -367,7 +375,7 @@
   @include bp-tablet {
     display: flex;
     justify-content: space-between;
-    max-width: $bp-tab;
+    // max-width: $bp-tab;
 
     @include gorisontal-center;
     padding: 5px $padding-usual-tab;
@@ -375,7 +383,7 @@
 
   @include bp-desktop {
     max-width: $bp-desk-small;
-    padding: 0 175px;
+    padding: 0 174px 0 175px;
 
     @include gorisontal-center;
   }

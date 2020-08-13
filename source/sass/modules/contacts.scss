@@ -2,8 +2,9 @@
   background-image: url("../img/bg-zigzag-line.svg");
   background-position: top left;
   background-repeat: repeat-x;
-  background-size: 100% 8px;
-  padding: $padding-usual 0 39px;
+  background-size: 100%;
+  // background-size: 100% 8px;
+  padding: 29px 0 39px;
 
   @include bp-tablet {
     /*max-width: $bp-tab;*/
@@ -11,7 +12,6 @@
     @include gorisontal-center;
     padding: 42px 0 57px;
     background-position-y: 19px;
-    background-size: 100% 16px;
   }
 
   @include bp-desktop {
@@ -23,7 +23,6 @@
     padding-top: 112px;
     padding-bottom: 0;
     margin-bottom: 104px;
-    background-size: 100% 21px;
   }
 }
 

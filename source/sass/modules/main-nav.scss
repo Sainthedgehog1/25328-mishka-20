@@ -5,7 +5,7 @@
 
   @include bp-tablet {
     & {
-      max-width: 768px;
+      // max-width: 768px;
       margin: 0 auto;
     }
   }
@@ -75,8 +75,9 @@
     & {
       display: grid;
       grid-template-columns: 1fr 1fr 332px;
-      max-width: 668px;
+      // max-width: 668px;
       margin: 0 auto;
+      padding: 0 50px;
     }
   }
 
@@ -84,6 +85,7 @@
     & {
       grid-template-columns: 450px min-content 1fr;
       max-width: 1048px;
+      padding: 0;
     }
   }
 }
@@ -95,7 +97,8 @@
   padding: 22px 0 13px;
   border-bottom: 1px solid $white-medium-dark;
 
-  &[href]:hover .logo {
+  &[href]:hover .logo,
+  &[href]:focus .logo {
     opacity: 0.6;
   }
 
@@ -218,7 +221,8 @@
   color: $black;
   border-bottom: 1px solid $white-medium-dark;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $black-06;
   }
 
@@ -234,25 +238,54 @@
   &--search svg,
   &--basket svg {
     position: absolute;
-    top: 50%;
-    left: 30px;
-    width: 19px;
+    top: 31px;
+    left: 32px;
+    width: 18px;
     height: 18px;
-    margin-top: -9px;
+    // margin-top: -9px;
     fill-opacity: 0.2;
     fill: $black;
 
-    &:hover svg,
-    &:hover svg {
-      fill: $tiffany-light;
-      fill-opacity: 1;
+    @include bp-tablet {
+      top: 36px;
+      left: 33px;
     }
 
-    &:active svg,
-    &:active svg {
-      fill: $tiffany-light;
-      fill-opacity: 0.3;
+    @include bp-desktop {
+      top: 36px;
+      left: 32px;
     }
+  }
+
+  &--basket svg {
+    left: 30px;
+    width: 21px;
+    height: 20px;
+    top: 29px;
+
+    @include bp-tablet {
+      top: 34px;
+      left: 31px;
+    }
+
+    @include bp-desktop {
+      top: 34px;
+      left: 31px;
+    }
+  }
+
+  &--search:hover svg,
+  &--basket:hover svg,
+  &--search:focus svg,
+  &--basket:focus svg {
+    fill: $tiffany-light;
+    fill-opacity: 1;
+  }
+
+  &--search:active svg,
+  &--basket:active svg {
+    fill: $tiffany-light;
+    fill-opacity: 0.3;
   }
 
   @include bp-tablet {
@@ -294,6 +327,14 @@
       padding-right: 30px;
       font-size: 15px;
     }
+  }
+}
+
+.main-nav__delivery {
+  margin: 0;
+
+  @include bp-tablet {
+    padding-top: 16px;
   }
 }
 
