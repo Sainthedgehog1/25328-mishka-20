@@ -1,27 +1,26 @@
 .full-order-box {
   width: 100%;
-  padding: 17px $padding-usual 26px;
+  padding: 17px 30px 26px;
 
   @include bp-tablet {
-    padding: 55px 0 45px;
+    padding: 55px 0 44px;
   }
 
   @include bp-desktop {
-    padding: 118px 0 $padding-usual-tab;
+    padding: 118px 0 50px;
   }
 }
 
 .full-order-box__description {
+  margin: 0;
+  padding: 0;
   font-size: 13px;
   line-height: 24px;
-  padding: 0;
-  margin: 0;
 
   @include bp-tablet {
     max-width: $bp-tab;
-
     @include gorisontal-center;
-    padding: 0 $padding-usual-tab;
+    padding: 0 50px;
     font-size: 17px;
     line-height: 30px;
   }
@@ -29,6 +28,5 @@
   @include bp-desktop {
     max-width: $bp-desk-small;
     padding: 0 150px 0 175px;
-    line-height: 1.8;
   }
 }

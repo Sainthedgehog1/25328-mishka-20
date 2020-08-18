@@ -4,16 +4,14 @@
   @include bp-tablet {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /*max-width: $bp-tab;*/
     max-width: 100%;
-
     @include gorisontal-center;
   }
 
   @include bp-desktop {
+    max-width: $bp-desk-big;
     padding-top: 124px;
     padding-bottom: 52px;
-    max-width: $bp-desk-big;
   }
 }
 
@@ -31,46 +29,47 @@
 
   @include bp-tablet {
     display: flex;
-    justify-content: center;
     align-items: center;
+    padding-right: 8px;
     text-align: center;
     line-height: 1;
-    padding-right: 9px;
   }
 
   @include bp-desktop {
-    order: -1;
     flex-basis: 175px;
     padding: 3px 57px 0 46px;
+    order: -1;
   }
 }
 
 .product-week__databox {
   @include bp-tablet {
-    position: relative;
-    padding: 0 42px 0 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 42px;
+    grid-column: 1/3;
+    grid-template-rows: min-content 1fr min-content min-content;
     min-height: 455px;
   }
 
   @include bp-desktop {
-    justify-content: space-between;
-    align-items: center;
+    grid-column-gap: 0;
     width: 100%;
     padding: 0;
   }
 }
 
 .product-week__description {
-  line-height: 24px;
-  padding: 11px 0 21px;
   margin: 0;
+  padding: 11px 0 21px;
+  line-height: 24px;
 
   @include bp-tablet {
+    grid-column: 1/2;
     width: 100%;
+    padding: 38px 0 41px 0;
     font-size: 17px;
     line-height: 30px;
-    /*line-height: inherit;*/
-    padding: 38px 0 41px 0;
   }
 
   @include bp-desktop {
@@ -80,10 +79,12 @@
 
 .product-week__info-box {
   @include bp-only-mobile {
-    // max-width: 260px;
     max-width: 100%;
-
     @include gorisontal-center;
+  }
+
+  @include bp-tablet {
+    grid-column: 1/2;
   }
 
   @include bp-desktop {
@@ -92,35 +93,25 @@
 }
 
 .product-week__photo {
-  // display: flex;
-  // justify-content: center;
-  margin: 28px 0 9px;
-
-  // @include adaptive-img-wrapper;
   min-width: 260px;
   min-height: 315px;
-
-  background-color: $white-medium;
+  margin: 28px 0 9px;
 
   @include bp-tablet {
-    position: absolute;
-    top: 0;
-    /*right: -100%;*/
-    right: -333px;
-    // padding-top: 51px;
-    // max-width: 333px;
-    // height: 403px;
-    margin-top: 51px;
-    min-width: 333px;
+    grid-column: 2/3;
+    grid-row: 1/5;
+    min-width: 334px;
     min-height: 404px;
+    margin-top: 50px;
+    // margin-top: 15.056%;
+    margin-bottom: 0;
   }
 
   @include bp-desktop {
-    right: -525px;
-    margin-top: -118px;
-    padding: 0;
     max-width: 525px;
     height: 636px;
+    margin-top: -118px;
+    padding: 0;
   }
 }
 
@@ -136,8 +127,9 @@
   }
 
   @include bp-tablet {
-    min-width: 333px;
+    min-width: 334px;
     min-height: 404px;
+    background-color: $white-medium;
   }
 
   @include bp-desktop {
@@ -157,9 +149,10 @@
   color: $black-medium-light;
 
   @include bp-tablet {
+    grid-column: 1/2;
+    padding: 57px 29px 33px 27px;
     font-size: 20px;
     line-height: 24px;
-    padding: 57px 29px 33px 27px;
   }
 
   @include bp-desktop {

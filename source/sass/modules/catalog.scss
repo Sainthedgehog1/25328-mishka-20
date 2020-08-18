@@ -3,17 +3,16 @@
   grid-template-columns: 1fr;
   grid-row-gap: 30px;
   width: 100%;
-  list-style-type: none;
-  padding: $padding-usual $padding-usual 0;
   margin: 0 auto 30px;
+  padding: 30px 30px 0;
+  list-style-type: none;
+
 
   @include bp-tablet {
     grid-row-gap: 54px;
-    // max-width: $bp-tab;
     margin-bottom: 0px;
-
     @include gorisontal-center;
-    padding: 68px $padding-usual-tab 47px;
+    padding: 68px 50px 47px;
   }
 
   @include bp-desktop {
@@ -36,16 +35,12 @@
   &:focus {
     .catalog__product-info {
       box-shadow: 0px 6px 10px $black-01;
-
-      @include transition;
     }
   }
 
   &:active {
     .catalog__product-info {
       box-shadow: 0px 3px 5px $black-01;
-
-      @include transition;
     }
   }
 
@@ -54,63 +49,35 @@
     padding: 0;
     min-height: 334px;
 
-    &:last-child {
+    &:nth-child(3n) {
       margin: 0;
     }
   }
 
   @include bp-desktop {
     grid-template-columns: 1fr;
-    width: 100%;
     height: auto;
-    /*margin-right: 5%;*/
     margin-bottom: 57px;
-    // overflow: hidden;
 
-    &:last-child {
+    &:nth-child(3n) {
       margin-bottom: 57px;
     }
-
-    // &:nth-child(3n) {
-    //   margin-right: 0;
-    //   margin-left: -1px;
-    // }
   }
 }
 
 .catalog__img-wrapper {
-  // @include flex-center-vh;
   @include adaptive-img-wrapper;
-
-  &--crutch {
-    @include bp-desktop {
-      margin-left: 1px;
-    }
-  }
 }
 
 .catalog__img {
-  position: relative;
   display: block;
   background-color: $white-medium;
+  @include adaptive-img;
 
   &:before {
     content: "";
     display: block;
     padding-top: 63.5%;
-  }
-
-  @include adaptive-img;
-
-  @include bp-tablet {
-    min-height: 334px;
-  }
-
-  @include bp-desktop {
-    /*min-width: 316px;*/
-    /*height: 462px;*/
-    width: 100%;
-    height: auto;
   }
 }
 
@@ -118,15 +85,13 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 27px 28px 20px;
   margin-top: 0px;
+  padding: 27px 28px 20px;
   border-top: 1px solid $white-medium-dark;
-  // border-top: none;
-
   @include transition;
 
   @include bp-tablet {
-    padding: 26px $padding-usual 4px 33px;
+    padding: 26px 30px 4px 33px;
   }
 
   @include bp-desktop {
@@ -170,25 +135,26 @@
 .catalog__title-link {
   color: $black;
   text-decoration: none;
+  outline: none;
 
   &:hover,
-  &:active {
+  &:focus {
     opacity: 0.6;
   }
 
-  &:focus {
+  &:active {
     opacity: 0.3;
   }
 }
 
 .catalog__description {
-  padding: 6px 0 17px;
   margin: 0;
+  padding: 6px 0 17px;
   font-size: 13px;
 
   @include bp-tablet {
     flex-grow: 1;
-    padding: 6px 0 $padding-usual;
+    padding: 6px 0 30px;
     font-size: 15px;
   }
 
@@ -204,7 +170,6 @@
     }
 
     @include bp-desktop {
-      // flex-grow: 0;
       padding: 8px 0 11px;
     }
   }
@@ -215,7 +180,6 @@
     }
 
     @include bp-desktop {
-      // margin-bottom: 6px;
       padding: 7px 0;
     }
   }
@@ -223,12 +187,12 @@
 
 .catalog__pricetag {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   padding: 22px 0 7px;
-  border-top: 1px solid $white-dark;
   color: $black;
+  border-top: 1px solid $white-dark;
 
   @include bp-tablet {
     padding: 3px 0 2px 0;
@@ -250,29 +214,54 @@
 
 .catalog__add-to-cart {
   @include flex-center-vh;
+  align-self: flex-start;
   width: 20px;
   height: 19px;
+  margin-right: -1px;
+  outline: none;
 
   @include bp-tablet {
-    margin-right: -20px;
     width: 64px;
     height: 64px;
+    margin-right: -19px;
+    padding-bottom: 8px;
   }
 }
 
+.catalog__item:nth-of-type(3n-1) .catalog__add-to-cart {
+  @include bp-desktop {
+    margin-right: -18px;
+  }
+}
+
+.catalog__item:nth-of-type(3n-2) .catalog__add-to-cart {
+  @include bp-desktop {
+    margin-right: -20px;
+  }
+}
+
+.catalog__add-to-cart:hover .catalog__add-to-cart-icon,
+.catalog__add-to-cart:focus .catalog__add-to-cart-icon {
+  fill: $tiffany-light;
+}
+
+.catalog__add-to-cart:active .catalog__add-to-cart-icon {
+  fill: $tiffany-light;
+  opacity: 0.3;
+}
+
 .catalog__add-to-cart-icon {
-  width: 20px;
-  height: 19px;
+  width: 22px;
+  height: 21px;
   fill: $grey;
 
-  @include transition;
-
-  &:hover,
-  &:active {
-    fill: $tiffany-light;
+  @include bp-tablet {
+    width: 23px;
+    height: 18px;
   }
 
-  &:focus {
-    opacity: 0.3;
+  @include bp-tablet {
+    width: 21px;
+    height: 18px;
   }
 }

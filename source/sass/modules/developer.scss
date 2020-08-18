@@ -11,53 +11,52 @@
   }
 
   @include bp-tablet {
-    width: 33%;
     justify-content: flex-end;
     font-size: 19px;
     line-height: 18px;
-    padding: $padding-usual-tab 0;
   }
 }
 
 .developer__link {
-  &:focus {
-    opacity: 30%;
-  }
+  outline: none;
 
   @include bp-tablet {
-    justify-content: flex-end;
-    margin: 20px -5px 0 0;
+    margin: -8px 0 0;
   }
 }
 
 .developer__text {
   padding: 3px 28px 5px 0;
 
-  @include transition;
-
-  &:hover {
-    @include transition;
-    opacity: 0.3;
-  }
-
   @include bp-tablet {
-    padding: 6px 26px 0 0;
+    padding: 0 28px 10px 0;
   }
 
   @include bp-desktop {
-    padding: 6px 23px 0 0;
+    padding-right: 29px;
   }
+}
+
+.developer__text:hover+.developer__link .developer__logo {
+  fill: $tiffany-medium-dark;
+}
+
+.developer__text:active+.developer__link .developer__logo {
+  fill: $tiffany-medium-dark;
+  opacity: 0.3;
 }
 
 .developer__logo {
   height: 34px;
   fill: $tiffany-light;
-
-  &:hover {
-    fill: $tiffany-medium-dark;
-  }
 }
 
-.developer__text:hover + .developer__link {
+.developer__link:hover .developer__logo,
+.developer__link:focus .developer__logo {
+  fill: $tiffany-medium-dark;
+}
+
+.developer__link:active .developer__logo {
+  fill: $tiffany-medium-dark;
   opacity: 0.3;
 }

@@ -3,13 +3,6 @@
   width: 100%;
   margin: 0 auto;
 
-  @include bp-tablet {
-    & {
-      // max-width: 768px;
-      margin: 0 auto;
-    }
-  }
-
   @include bp-desktop {
     & {
       max-width: 1048px;
@@ -25,14 +18,17 @@
   display: block;
   width: 21px;
   height: 21px;
-  cursor: pointer;
-  border: none;
   background-color: $white;
+  border: none;
+  cursor: pointer;
+
+  // &:focus {
+  //   outline: 1px solid $black;
+  //   outline-offset: 3px;
+  // }
 
   @include bp-tablet {
-    & {
-      display: none;
-    }
+    display: none;
   }
 }
 
@@ -45,6 +41,11 @@
   height: 2px;
   background-color: $black-light;
   box-shadow: 0 6px 0 0 $black-light, 0 12px 0 0 $black-light;
+}
+
+.main-nav--closed .main-nav__toggle:focus::before {
+  background-color: $tiffany-light-medium;
+  box-shadow: 0 6px 0 0 $tiffany-light-medium, 0 12px 0 0 $tiffany-light-medium;
 }
 
 .main-nav--opened .main-nav__toggle::before,
@@ -67,26 +68,24 @@
   transform: rotate(-45deg);
 }
 
+.main-nav--opened .main-nav__toggle:focus::before,
+.main-nav--opened .main-nav__toggle:focus::after {
+  background-color: $tiffany-light-medium;
+}
+
 .main-nav__wrap-menu {
   display: grid;
   grid-template-columns: 1fr;
 
   @include bp-tablet {
-    & {
-      display: grid;
-      grid-template-columns: 1fr 1fr 332px;
-      // max-width: 668px;
-      margin: 0 auto;
-      padding: 0 50px;
-    }
+    grid-template-columns: 1fr 1fr 332px;
+    padding: 0 50px;
   }
 
   @include bp-desktop {
-    & {
-      grid-template-columns: 450px min-content 1fr;
-      max-width: 1048px;
-      padding: 0;
-    }
+    grid-template-columns: 450px min-content 1fr;
+    max-width: 1048px;
+    padding: 0;
   }
 }
 
@@ -96,6 +95,7 @@
   margin-left: -2px;
   padding: 22px 0 13px;
   border-bottom: 1px solid $white-medium-dark;
+  outline: none;
 
   &[href]:hover .logo,
   &[href]:focus .logo {
@@ -107,22 +107,18 @@
   }
 
   @include bp-tablet {
-    & {
-      justify-self: flex-start;
-      align-items: center;
-      padding-top: 22px;
-      border-bottom: none;
-      order: 0;
-    }
+    justify-self: flex-start;
+    align-items: center;
+    padding-top: 22px;
+    border-bottom: none;
+    order: 0;
   }
 
   @include bp-desktop {
-    & {
-      grid-column: 2/3;
-      padding: 9px 0 0;
-      margin-left: -1px;
-      order: 1;
-    }
+    grid-column: 2/3;
+    margin-left: -1px;
+    padding: 9px 0 0;
+    order: 1;
   }
 }
 
@@ -131,9 +127,9 @@
 }
 
 .main-nav__menu-list {
-  list-style: none;
   margin: 0;
   padding: 0;
+  list-style: none;
 
   &--addition {
     display: none;
@@ -147,11 +143,11 @@
 
     &--user {
       grid-column: 2/4;
-      order: 1;
       justify-content: flex-end;
       width: 450px;
       margin-left: auto;
       text-align: right;
+      order: 1;
     }
 
     &--total {
@@ -173,20 +169,20 @@
       grid-column: 1/2;
       display: flex;
       flex-wrap: wrap;
-      width: 700px;
       justify-content: flex-start;
+      width: 700px;
       order: 3;
     }
 
     &--total {
       grid-column: 1/2;
-      order: 0;
       width: 450px;
+      order: 0;
     }
 
     &--total .main-nav__item:nth-child(2n-1) {
-      margin-bottom: 1px;
       width: 184px;
+      margin-bottom: 1px;
       border-right: 1px solid $black-01;
     }
 
@@ -196,8 +192,8 @@
     }
 
     &--total .main-nav__link {
-      margin-left: -1px;
       min-height: 89px;
+      margin-left: -1px;
       padding-top: 32px;
       font-size: 17px;
     }
@@ -220,13 +216,14 @@
   text-decoration: none;
   color: $black;
   border-bottom: 1px solid $white-medium-dark;
+  outline: none;
 
-  &:hover,
-  &:focus {
+  &[href]:hover,
+  &[href]:focus {
     color: $black-06;
   }
 
-  &:active {
+  &[href]:active {
     color: $black-03;
   }
 
@@ -242,9 +239,8 @@
     left: 32px;
     width: 18px;
     height: 18px;
-    // margin-top: -9px;
-    fill-opacity: 0.2;
     fill: $black;
+    fill-opacity: 0.2;
 
     @include bp-tablet {
       top: 36px;
@@ -258,10 +254,10 @@
   }
 
   &--basket svg {
+    top: 29px;
     left: 30px;
     width: 21px;
     height: 20px;
-    top: 29px;
 
     @include bp-tablet {
       top: 34px;
@@ -289,36 +285,34 @@
   }
 
   @include bp-tablet {
-    & {
-      min-height: 88px;
-      padding-top: 32px;
-      padding-left: 0;
-      border-bottom: none;
+    min-height: 88px;
+    padding-top: 32px;
+    padding-left: 0;
+    border-bottom: none;
 
-      &--search {
-        min-width: 84px;
-        border-left: 1px solid $black-01;
-        border-right: 1px solid $black-01;
-      }
+    &--search {
+      min-width: 84px;
+      border-left: 1px solid $black-01;
+      border-right: 1px solid $black-01;
+    }
 
-      &--basket {
-        min-width: 264px;
-      }
+    &--basket {
+      min-width: 264px;
+    }
 
-      &--delivery {
-        min-height: 64px;
-        padding-top: 18px;
-        font-size: 15px;
-        font-weight: 400;
-        color: $black-medium-light;
-      }
+    &--delivery {
+      min-height: 64px;
+      padding-top: 18px;
+      font-size: 15px;
+      font-weight: 400;
+      color: $black-medium-light;
     }
   }
 
   @include bp-desktop {
     &--basket {
-      margin-right: 1px;
       min-width: 264px;
+      margin-right: 1px;
     }
 
     &--addition {
@@ -368,14 +362,12 @@
 }
 
 @include bp-tablet {
-
   .main-nav__hidden {
     display: none;
   }
 }
 
 @include bp-desktop {
-
   .main-nav__item+.main-nav__item .main-nav__link--addition {
     padding-left: 31px;
   }

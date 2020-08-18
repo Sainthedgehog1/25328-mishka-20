@@ -15,7 +15,6 @@
 @import "common/base";
 @import "common/font-face";
 @import "common/hidden";
-// @import "common/layouts.scss";
 
 /* ========== */
 /* Components */
@@ -26,10 +25,10 @@
 /* ======= */
 /* Modules */
 /* ======= */
-// index.html header
+/* index.html header */
 @import "modules/logo";
 @import "modules/main-nav";
-// index.html content
+/* index.html content */
 @import "modules/main-content";
 @import "modules/promo";
 @import "modules/catalog-product-wrapper";
@@ -44,21 +43,17 @@
 @import "modules/contacts";
 @import "modules/contacts-info";
 @import "modules/map-box";
-// index.html footer
+/* index.html footer */
 @import "modules/main-footer";
 @import "modules/social-box";
 @import "modules/developer";
-// index.html modal
+/* index.html modal */
 @import "modules/modal";
-// catalog.html
-@import "modules/intro";
+@import "modules/order-form";
+/* catalog.html */
 @import "modules/catalog";
 @import "modules/video";
 @import "modules/video-box";
+/* form.html */
 @import "modules/full-order-box";
 @import "modules/full-order-form";
-// modal
-@import "modules/order-form";
-
-
-// @import "modules/product-filter";

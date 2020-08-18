@@ -1,53 +1,24 @@
 .map-box {
-  // position: relative;
   margin: 33px 0 42px;
-  // background-color: $white-medium;
-
-  // background-image: url("img/map-mobile@1x.jpg");
-  // background-color: $white-medium;
-  // background-position: center top;
-  // background-repeat: no-repeat;
-
-  // &::after {
-  //   position: absolute;
-  //   top: 32%;
-  //   left: 43%;
-  //   content: "";
-  //   display: block;
-  //   width: 67px;
-  //   height: 100px;
-  //   background: url("../img/icon-map-pin.svg") no-repeat center;
-  //   background-size: contain;
-
-  //   @include bp-tablet {
-  //     left: 47.3%;
-  //     top: 30.7%;
-  //   }
-
-  //   @include bp-desktop {
-  //     top: 32%;
-  //     left: 45.3%;
-  //   }
-  // }
 
   @include bp-tablet {
-    /*max-width: 768px;*/
     margin: 28px 0 55px;
   }
 
   @include bp-desktop {
-    margin: 0;
     width: 527px;
     height: 457px;
+    margin: 0;
   }
 }
 
+.map-box iframe {
+  border: 0;
+}
+
 .map-box__img {
-  position: relative;
   display: block;
-  // width: 100%;
-  // height: 142%;
-  min-width: 320px;
+  width: 100%;
   min-height: 454px;
   background-image: url("../img/map-mobile@1x.jpg");
   background-size: 320px auto;
@@ -58,22 +29,6 @@
   @include bp-retina-2x {
     background-image: url("../img/map-mobile@2x.jpg");
   }
-
-  // &:before {
-  //   content: "";
-  //   display: block;
-  //   padding-top: 242%;
-  //   // background-image: url("../img/map-mobile@1x.jpg");
-  //   // background-size: contain;
-  //   // background-color: $white-medium;
-  //   // background-position: center;
-  //   // background-repeat: no-repeat;
-  //   // padding-top: 138%;
-
-  //   @include bp-tablet {
-  //     padding-top: 57%;
-  //   }
-  // }
 
   @include bp-tablet {
     min-height: 457px;
@@ -88,12 +43,7 @@
     }
   }
 
-
   @include bp-desktop {
-    /*min-width: 527px;*/
-    /*min-height: 457px;*/
-    width: 100%;
-    height: auto;
     background-image: url("../img/map-desktop@1x.jpg");
     background-size: 527px auto;
     background-color: $white-medium;

@@ -1,39 +1,41 @@
 .modal {
   position: fixed;
-  top: 25vh;
-  bottom: 100%;
-  left: 0;
-  right: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
   background: $white-09;
-  opacity: 0;
-  pointer-events: none;
   visibility: hidden;
   backface-visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
   z-index: 0;
 
   @include transition;
 
   &--show {
-    z-index: 9999;
+    z-index: 30;
     visibility: visible;
     opacity: 1;
     pointer-events: auto;
-
     @include transition;
+  }
+
+  @include bp-tablet {
+    width: 568px;
   }
 }
 
 .modal__container {
   width: 100%;
   padding: 28px 29px 46px;
-  border: 1px solid $grey-medium-dark;
   background-color: $white;
   box-shadow: 0px 5px 10px $black-025;
+  border: 1px solid $grey-medium-dark;
 
   @include bp-tablet {
     max-width: 568px;
-    padding: 37px 105px 46px;
-
     @include gorisontal-center;
+    padding: 37px 105px 46px;
   }
 }

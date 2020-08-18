@@ -1,4 +1,4 @@
-/* breakpoints for grids */
+/* breakpoints */
 @mixin bp-mobile {
   @media all and (min-width: $bp-mob) {
     @content;

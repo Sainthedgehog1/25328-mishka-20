@@ -6,21 +6,18 @@
 
   @include bp-tablet {
     font-size: 15px;
-    line-height: 20px;
   }
 
   @include bp-desktop {
-    font-size: 15px;
-    line-height: 20px;
     margin-top: 22px;
     margin-left: 0px;
+    font-size: 15px;
 
     &--infotable {
       width: 50%;
     }
   }
 }
-
 
 .product-info__row {
   border-bottom: 1px solid $white-medium-dark;
@@ -51,9 +48,4 @@
 .product-info__value {
   font-size: 15px;
   line-height: 20px;
-
-  @include bp-desktop {
-    font-size: 15px;
-    line-height: 20px;
-  }
 }

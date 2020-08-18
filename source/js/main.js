@@ -9,7 +9,7 @@ navMain.classList.remove('main-nav--nojs');
 navMain.classList.remove('main-nav--opened');
 navMain.classList.add('main-nav--closed');
 
-navToggle.addEventListener('click', function() {
+navToggle.addEventListener('click', function () {
   if (navMain.classList.contains('main-nav--closed')) {
     navMain.classList.remove('main-nav--closed');
     navMain.classList.add('main-nav--opened');
@@ -22,13 +22,16 @@ navToggle.addEventListener('click', function() {
 /* Модальное окно */
 /* ============== */
 var overlay = document.querySelector(".modal-overlay");
-var openModal = document.querySelector(".open-modal");
+var openModals = document.querySelectorAll(".open-modal");
 var popup = document.querySelector(".modal");
-openModal.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  overlay.style.display = "block";
-  popup.classList.toggle("modal--show");
+Array.from(openModals).forEach(function (openModal) {
+  openModal.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    overlay.style.display = "block";
+    popup.classList.toggle("modal--show");
+  });
 });
+
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
     evt.preventDefault();

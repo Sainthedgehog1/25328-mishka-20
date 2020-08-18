@@ -9,18 +9,16 @@
   @include bp-desktop {
     grid-column: 1/2;
     grid-row: 1/4;
-    align-items: end;
     width: 682px;
     height: 455px;
-    padding: 0;
     margin: 0;
+    padding: 0;
   }
 }
 
 .video-box__prewiew {
-  @include adaptive-img;
-
   display: block;
+  @include adaptive-img;
 
   @include bp-desktop {
     min-height: 455px;
@@ -29,25 +27,35 @@
 
 .video-box__play {
   position: absolute;
-  cursor: pointer;
-
   @include position-zero;
-  margin: auto;
   width: 101px;
   height: 77px;
+  margin: auto;
   border: none;
   background: url("../img/icon-play.svg") no-repeat center;
   background-size: contain;
-
   @include transition;
+  cursor: pointer;
 
   &:hover,
-  &:active {
+  &:focus {
     transform: scale(1.2);
   }
 
-  &:focus {
+  &:active {
     transform: scale(0.8);
-    opacity: 0.6;
+    opacity: 0.3;
+  }
+
+  @include bp-tablet {
+    width: 102px;
+    height: 78px;
+  }
+
+  @include bp-desktop {
+    top: 1px;
+    left: 2px;
+    width: 101px;
+    height: 77px;
   }
 }

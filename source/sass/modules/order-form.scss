@@ -1,17 +1,17 @@
 .order-form__title {
   display: block;
-  margin: 0 auto;
   width: 150px;
-  color: $black;
+  margin: 0 auto;
   font-size: 25px;
   text-transform: uppercase;
   text-align: center;
+  color: $black;
 
   &--modal {
-    padding-left: 4px;
     width: 152px;
-    text-align: left;
+    padding-left: 4px;
     line-height: 31px;
+    text-align: left;
 
     @include bp-tablet {
       padding-left: 2px;
@@ -33,9 +33,9 @@
 .order-form__item-title {
   display: block;
   width: 100%;
-  text-align: center;
   padding-top: 14px;
   padding-bottom: 21px;
+  text-align: center;
 
   &--modal {
     @include bp-tablet {

@@ -4,19 +4,23 @@
 
   @include bp-tablet {
     @include flex-center-vh;
-    width: 33%;
   }
 }
 
 .social-box__list {
   display: flex;
-  width: 100%;
-  max-width: 190px;
-  margin: 0 auto;
+  max-width: 180px;
+  margin: -1px auto 0 auto;
   list-style-type: none;
 
   @include bp-tablet {
-    max-width: 185px;
+    width: 100%;
+    max-width: 177px;
+    margin: -9px 0 0 -80px;
+  }
+
+  @include bp-desktop {
+    margin-left: -82px;
   }
 }
 
@@ -30,26 +34,15 @@
   width: 100%;
   min-height: 80px;
   text-decoration: none;
+  outline: none;
 
-  @include bp-tablet {
-    padding: 10px 0 0 3px;
-  }
-}
-
-.social-box__link-icon {
-  width: 21px;
-  height: 28px;
-  fill: $black-light;
-
-  @include transition;
-
-  &:hover,
-  &:active {
-    fill: $tiffany-light-medium;
+  &:hover .social-box__link-icon,
+  &:focus .social-box__link-icon {
+    fill: $tiffany-medium-dark;
   }
 
-  &:focus {
-    fill: $tiffany-light-medium;
+  &:active .social-box__link-icon {
+    fill: $tiffany-medium-dark;
     opacity: 0.3;
   }
 }

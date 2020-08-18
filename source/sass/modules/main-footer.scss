@@ -1,28 +1,29 @@
 .main-footer {
+  padding: 0 30px;
   background-color: $white-medium;
-  padding: 0 $padding-usual;
 
   @include bp-tablet {
-    display: flex;
-    // height: 143px;
-    padding: 0 $padding-usual-tab;
+    margin-top: 1px;
+    padding: 0 50px;
+    padding-top: 1px;
+  }
+
+  @include bp-desktop {
+    margin-top: 0;
   }
 }
 
 .main-footer__wrapper {
   @include bp-tablet {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     width: 100%;
-    max-width: 668px;
-
+    min-height: 143px;
     @include gorisontal-center;
-    height: 143px;
   }
 
   @include bp-desktop {
     max-width: $bp-desk-small;
-
-    @include gorisontal-center;
   }
 }
 
@@ -33,22 +34,21 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    width: 33%;
   }
 }
 
-.main-footer__logo-img {
-  @include transition;
+.main-footer__link {
+  outline: none;
+}
 
-  &:hover {
-    fill: $tiffany-light-medium;
-  }
+.main-footer__link:hover .main-footer__logo-img,
+.main-footer__link:focus .main-footer__logo-img {
+  fill: $tiffany-medium-dark;
+}
 
-  &:focus,
-  &:active {
-    fill: $tiffany-light-medium;
-    opacity: 0.3;
-  }
+.main-footer__link:active .main-footer__logo-img {
+  fill: $tiffany-medium-dark;
+  opacity: 0.3;
 }
 
 .main-footer__developer {

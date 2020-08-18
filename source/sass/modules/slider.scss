@@ -1,8 +1,8 @@
 .slider {
   position: relative;
   width: 100%;
-  overflow: hidden;
   padding-bottom: 4px;
+  overflow: hidden;
 }
 
 .slider__item {
@@ -18,15 +18,14 @@
     position: absolute;
     bottom: 5px;
     right: 0;
-    padding: 0;
     width: 175px;
+    padding: 0;
   }
 }
 
 .slider__control-link {
   width: 50%;
   height: 52px;
-  float: left;
   background-color: $white;
   text-decoration: none;
   border: 1px solid $white-medium-dark;
@@ -55,11 +54,11 @@
     background-size: auto 52%;
 
     &:hover,
-    &:active {
+    &:focus {
       opacity: 0.6;
     }
 
-    &:focus {
+    &:active {
       opacity: 0.3;
     }
   }

@@ -3,12 +3,11 @@
   padding: 31px 30px 32px 30px;
 
   @include bp-tablet {
-    padding: $padding-usual-tab;
+    padding: 50px;
   }
 
   @include bp-desktop {
     max-width: $bp-desk-big;
-
     @include gorisontal-center;
   }
 }

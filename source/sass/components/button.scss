@@ -3,27 +3,25 @@
   width: 100%;
   padding: 14px 0;
   text-align: center;
-  color: $black-medium-light;
   font-size: 18px;
   line-height: 20px;
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
-  cursor: pointer;
+  color: $black-medium-light;
   background-color: $white;
   border: 2px solid $black-medium-light;
 
-  @include transition;
-
   &:hover,
   &:focus {
-    background-color: $black-medium-light;
     color: $white;
+    background-color: $black-medium-light;
+    outline: none;
   }
 
   &:active {
+    color: $white-03;
     background-color: $black-medium-light;
-    color: $black-light-extra;
   }
 
   @include bp-tablet {
@@ -31,13 +29,9 @@
     font-size: 17px;
 
     &--modal-form {
-      margin-left: 3px;
       width: 98.2%;
+      margin-left: 3px;
     }
-  }
-
-  @include bp-desktop {
-    font-size: 17px;
   }
 
   &--contacts {
@@ -55,16 +49,17 @@
   &--modal-form {
     padding: 14px 25px 14px 23px;
     font-size: 17px;
+    color: $white;
     background-color: $tiffany-light-extra;
     border: 2px solid $tiffany-light-extra;
-    color: $white;
 
     &:hover,
     &:focus,
     &:active {
+      color: $tiffany-light-extra;
       background-color: $white;
       border: 2px solid $tiffany-light-extra;
-      color: $tiffany-light-extra;
+      outline: none;
     }
 
     @include bp-tablet {
@@ -95,12 +90,10 @@
   }
 }
 
+// page-form
+
 .page-form .button {
   @include bp-tablet {
-    padding: 14px 24px 14px 22px;
-  }
-
-  @include bp-desktop {
     padding: 14px 24px;
   }
 }
