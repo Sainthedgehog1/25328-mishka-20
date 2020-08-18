@@ -679,6 +679,10 @@
   }
 }
 
+.full-order-form__text-input:focus+.full-order-form__icon {
+  fill: $tiffany-light-medium;
+}
+
 .full-order-form__fieldset--phone .full-order-form__text-input,
 .full-order-form__fieldset--email .full-order-form__text-input {
   @include bp-tablet {
@@ -714,8 +718,6 @@
       right: 4px;
     }
   }
-
-
 }
 
 .full-order-form__element:hover .full-order-form__icon,
@@ -735,6 +737,7 @@
   resize: none;
 
   &:hover,
+  &:focus,
   &:active {
     border-color: $tiffany-light-medium;
   }
