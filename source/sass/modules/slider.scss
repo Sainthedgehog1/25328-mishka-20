@@ -12,7 +12,7 @@
 .slider__control {
   display: flex;
   width: 100%;
-  padding: 33px 0 34px;
+  padding: 32px 0 34px;
 
   @include bp-tablet {
     position: absolute;
@@ -64,12 +64,12 @@
   }
 
   @include bp-tablet {
-    background-position: 50% 49%;
+    background-position: 50% 47%;
     background-size: auto 50%;
     border: none;
   }
 
   @include bp-desktop {
-    background-position: 50% 48%;
+    background-position: 50% 44%;
   }
 }

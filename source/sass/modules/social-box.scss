@@ -10,7 +10,7 @@
 .social-box__list {
   display: flex;
   max-width: 180px;
-  margin: -1px auto 0 auto;
+  margin: -1px auto 1px auto;
   list-style-type: none;
 
   @include bp-tablet {

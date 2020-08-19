@@ -99,6 +99,6 @@
   }
 }
 
-.order-form__radio-input:checked+.order-form__item-element-value {
+.order-form__radio-input:checked + .order-form__item-element-value {
   border: 2px solid $tiffany-light-medium;
 }

@@ -194,7 +194,7 @@
     &--total .main-nav__link {
       min-height: 89px;
       margin-left: -1px;
-      padding-top: 32px;
+      padding-top: 33px;
       font-size: 17px;
     }
 
@@ -286,7 +286,7 @@
 
   @include bp-tablet {
     min-height: 88px;
-    padding-top: 32px;
+    padding-top: 33px;
     padding-left: 0;
     border-bottom: none;
 
@@ -368,7 +368,7 @@
 }
 
 @include bp-desktop {
-  .main-nav__item+.main-nav__item .main-nav__link--addition {
-    padding-left: 31px;
+  .main-nav__item + .main-nav__item .main-nav__link--addition {
+    padding-left: 32px;
   }
 }

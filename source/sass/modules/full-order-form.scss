@@ -1,36 +1,33 @@
 .full-order-form {
   width: 100%;
-  padding: 29px 0;
+  padding: 30px 0;
 
   @include bp-tablet {
-    padding: 20px 0 0;
+    padding: 19px 0 0;
   }
 }
 
-.full-order-form__wrapper {
-
-  &:nth-child(2),
-  &:nth-child(4),
-  &:nth-child(5) {
-    @include bp-tablet {
-      background-color: $white-medium;
-    }
+.full-order-form__wrapper:nth-child(2),
+.full-order-form__wrapper:nth-child(4),
+.full-order-form__wrapper:nth-child(5) {
+  @include bp-tablet {
+    background-color: $white-medium;
   }
 }
 
 .full-order-form__fieldset {
-  padding: 0 0 34px;
+  padding: 0 0 35px;
 
   &--phone {
-    padding-bottom: 34px;
+    padding-bottom: 35px;
   }
 
   &--email {
-    padding-bottom: 34px;
+    padding-bottom: 35px;
   }
 
   &--comments {
-    padding-bottom: 15px;
+    padding-bottom: 17px;
   }
 
   @include bp-tablet {
@@ -61,8 +58,8 @@
     }
 
     &--comments {
-      padding-top: 49px;
-      padding-bottom: 47px;
+      padding-top: 50px;
+      padding-bottom: 48px;
     }
   }
 
@@ -94,7 +91,7 @@
     }
 
     &--comments {
-      padding: 49px 175px 48px 0;
+      padding: 50px 175px 49px 0;
     }
   }
 }
@@ -102,7 +99,7 @@
 .full-order-form__title {
   display: flex;
   align-items: center;
-  padding: 0 0 30px;
+  padding: 0 0 29px;
   font-size: 17px;
   line-height: 16px;
   color: $tiffany-light;
@@ -117,11 +114,8 @@
     content: "";
     flex-grow: 1;
     height: 1px;
+    margin-top: -1px;
     background: $tiffany;
-  }
-
-  &--color {
-    padding: 0 0 22px;
   }
 
   &--phone {
@@ -130,10 +124,6 @@
 
   &--email {
     padding: 0 0 19px;
-  }
-
-  &--comments {
-    padding: 0 0 15px;
   }
 
   @include bp-tablet {
@@ -160,13 +150,26 @@
     }
 
     &--email {
-      padding: 0 0 16px;
+      padding: 0 0 15px;
+    }
+  }
+
+  &--color {
+    min-width: 167px;
+    padding: 0 0 21px;
+
+    @include bp-desktop {
+      min-width: 175px;
     }
   }
 
   @include bp-desktop {
     min-width: 175px;
     padding: 3px 0 0 61px;
+
+    &--fullname {
+      padding-top: 4px;
+    }
 
     &--type {
       min-width: 174px;
@@ -179,14 +182,6 @@
 
     &--email {
       padding: 3px 0 0 62px;
-    }
-  }
-
-  &--color {
-    min-width: 167px;
-
-    @include bp-desktop {
-      min-width: 175px;
     }
   }
 
@@ -231,11 +226,19 @@
   }
 
   @include bp-tablet {
-    padding: 2px 0 0 0;
+    padding: 3px 0 0 0;
+
+    &--email {
+      padding: 2px 0 0 0;
+    }
+
+    &--comments {
+      padding: 2px 0 0 0;
+    }
   }
 
   @include bp-desktop {
-    padding: 0;
+    padding: 1px 0 0 0;
 
     &--fullname {
       padding: 1px 0 0 0;
@@ -266,7 +269,7 @@
   flex-wrap: wrap;
   position: relative;
   width: 100%;
-  padding: 0 0 11px;
+  padding: 0 0 10px;
   font-size: 17px;
   line-height: 18px;
   font-weight: bold;
@@ -281,7 +284,7 @@
   }
 
   &--fullname {
-    padding-bottom: 22px;
+    padding-bottom: 23px;
   }
 
   @include bp-tablet {
@@ -322,9 +325,9 @@
         padding-left: 17px;
       }
 
-      &:last-child {
-        padding-bottom: 24px;
-      }
+      // &:last-child {
+      //   padding-bottom: 24px;
+      // }
 
       &:nth-child(3n) {
         padding-left: 37px;
@@ -365,7 +368,7 @@
 
 .full-order-form__remark {
   margin: 0;
-  padding: 0 0 31px;
+  padding: 0 0 30px;
   font-size: 14px;
   line-height: 16px;
 
@@ -380,11 +383,13 @@
   }
 
   @include bp-desktop {
+    padding-top: 1px;
     padding-right: 1px;
   }
 }
 
 .full-order-form__button {
+  padding: 15px 24px 13px 24px;
   font-size: 17px;
 
   @include bp-tablet {
@@ -405,7 +410,7 @@
     align-items: center;
     min-height: 40px;
     padding-left: 60px;
-    padding-top: 5px;
+    padding-top: 6px;
 
     @include bp-tablet {
       min-height: 52px;
@@ -434,7 +439,6 @@
   }
 
   &--checkbox-crutch {
-
     @include bp-tablet {
       padding-top: 5px;
       padding-left: 82px;
@@ -521,6 +525,7 @@
     border-radius: 50%;
     background: $tiffany-light-medium;
     opacity: 0;
+
     @include transition;
 
     @include bp-tablet {
@@ -548,6 +553,7 @@
     background: url("../img/icon-tick.svg") no-repeat center;
     background-size: 22px 16px;
     opacity: 0;
+
     @include transition;
 
     @include bp-tablet {
@@ -598,15 +604,15 @@
   }
 }
 
-.full-order-form__choice:checked+.full-order-form__value--radio::after,
-.full-order-form__choice:checked+.full-order-form__value--checkbox::after {
+.full-order-form__choice:checked + .full-order-form__value--radio::after,
+.full-order-form__choice:checked + .full-order-form__value--checkbox::after {
   opacity: 1;
 }
 
 .full-order-form__text-input {
   display: flex;
   width: 100%;
-  padding: 14px 0 12px;
+  padding: 16px 0 14px;
   border: 1px solid transparent;
   border-bottom: 2px solid $black;
   border-left: none;
@@ -616,7 +622,7 @@
   font-weight: normal;
 
   &--crutch {
-    padding: 14px 0 11px;
+    padding: 14px 0 15px;
   }
 
   &:hover,
@@ -632,7 +638,7 @@
   }
 
   &--phone {
-    padding: 0 0 15px;
+    padding: 2px 0 17px;
     font-size: 17px;
     line-height: 18px;
 
@@ -647,10 +653,10 @@
   }
 
   &--email {
-    padding: 0 0 12px;
+    padding: 0 0 16px;
 
     @include bp-tablet {
-      padding: 13px 18px;
+      padding: 13px 18px 12px 18px;
     }
 
     @include bp-desktop {
@@ -679,7 +685,7 @@
   }
 }
 
-.full-order-form__text-input:focus+.full-order-form__icon {
+.full-order-form__text-input:focus + .full-order-form__icon {
   fill: $tiffany-light-medium;
 }
 
@@ -729,6 +735,7 @@
 .full-order-form__textarea {
   display: flex;
   width: 100%;
+  min-height: 142px;
   padding: 15px;
   font-size: 17px;
   line-height: 18px;

@@ -10,9 +10,10 @@
 
   @include bp-tablet {
     grid-row-gap: 54px;
-    margin-bottom: 0px;
-    @include gorisontal-center;
+    margin-bottom: 0;
     padding: 68px 50px 47px;
+
+    @include gorisontal-center;
   }
 
   @include bp-desktop {
@@ -20,7 +21,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 51px;
     max-width: $bp-desk-big;
-    padding-top: 131px;
+    padding-top: 111px;
     padding-bottom: 0;
   }
 }
@@ -29,18 +30,18 @@
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  box-shadow: 0px 0px 0px 1px $white-medium-dark inset;
+  box-shadow: 0 0 0 1px $white-medium-dark inset;
 
   &:hover,
   &:focus {
     .catalog__product-info {
-      box-shadow: 0px 6px 10px $black-01;
+      box-shadow: 0 6px 10px $black-01;
     }
   }
 
   &:active {
     .catalog__product-info {
-      box-shadow: 0px 3px 5px $black-01;
+      box-shadow: 0 3px 5px $black-01;
     }
   }
 
@@ -72,9 +73,10 @@
 .catalog__img {
   display: block;
   background-color: $white-medium;
+
   @include adaptive-img;
 
-  &:before {
+  &::before {
     content: "";
     display: block;
     padding-top: 63.5%;
@@ -85,36 +87,37 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-top: 0px;
+  margin-top: 0;
   padding: 27px 28px 20px;
   border-top: 1px solid $white-medium-dark;
+
   @include transition;
 
   @include bp-tablet {
-    padding: 26px 30px 4px 33px;
+    padding: 27px 30px 4px 33px;
   }
 
   @include bp-desktop {
     width: 100%;
     min-height: 197px;
-    padding: 26px 30px 4px 28px;
+    padding: 27px 30px 4px 28px;
   }
 
   &--crutch {
     padding: 24px 28px 20px;
 
     @include bp-tablet {
-      padding: 25px 30px 4px 33px;
+      padding: 26px 30px 4px 33px;
     }
 
     @include bp-desktop {
-      padding: 25px 30px 4px 27px;
+      padding: 26px 30px 4px 27px;
     }
   }
 
   &--crutch-basket {
     @include bp-desktop {
-      padding: 26px 30px 4px 27px;
+      padding: 27px 30px 3px 27px;
     }
   }
 }
@@ -159,7 +162,7 @@
   }
 
   @include bp-desktop {
-    padding: 7px 0;
+    padding: 6px 0;
   }
 
   &--crutch {
@@ -170,7 +173,7 @@
     }
 
     @include bp-desktop {
-      padding: 8px 0 11px;
+      padding: 7px 0 11px;
     }
   }
 
@@ -180,7 +183,7 @@
     }
 
     @include bp-desktop {
-      padding: 7px 0;
+      padding: 6px 0;
     }
   }
 }
@@ -195,11 +198,17 @@
   border-top: 1px solid $white-dark;
 
   @include bp-tablet {
-    padding: 3px 0 2px 0;
+    padding: 4px 0 1px 0;
   }
 
   @include bp-desktop {
     padding: 4px 0 1px 0;
+  }
+
+  &--laundry-basket {
+    @include bp-desktop {
+      min-height: 71px;
+    }
   }
 }
 

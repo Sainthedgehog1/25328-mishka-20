@@ -13,13 +13,14 @@
 
   @include bp-desktop {
     max-width: $bp-desk-big;
+
     @include gorisontal-center;
   }
 }
 
 .catalog-product-type__item {
   display: flex;
-  align-items: flex-end;
+  // align-items: flex-end;
   width: 100%;
 
   @include bp-tablet {
@@ -33,7 +34,7 @@
   align-items: center;
   width: 100%;
   min-height: 103px;
-  padding: 0 50% 2% 30px;
+  padding: 14px 50% 36px 30px;
   font-size: 19px;
   line-height: 24px;
   font-weight: bold;
@@ -46,8 +47,11 @@
   &:focus,
   &:active {
     min-height: 108px;
-    margin-top: -5px;
-    padding-bottom: 2%;
+    // margin-top: -5px;
+    // padding-bottom: 2%;
+    // margin-bottom: -5px;
+    transform: translateY(-5px);
+    min-height: calc(100% + 5px);
     background-color: $tiffany-medium-light;
     text-decoration: none;
     outline: none;
@@ -115,24 +119,17 @@
   }
 
   @include bp-tablet {
-    padding: 0 40% 6px 36px;
+    padding: 14px 40% 20px 36px;
     min-height: 117px;
     font-size: 20px;
     line-height: 30px;
-
-    &:hover,
-    &:focus,
-    &:active {
-      height: 122px;
-    }
   }
 
   @include bp-desktop {
-    padding: 0px 60% 6px 36px;
+    padding: 14px 60% 20px 36px;
   }
 
   &--interior {
-
     @include bp-desktop {
       padding-left: 37px;
     }

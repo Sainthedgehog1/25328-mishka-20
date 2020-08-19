@@ -7,7 +7,7 @@
 
   @include bp-tablet {
     @include gorisontal-center;
-    padding: 42px 0 57px;
+    padding: 42px 0 56px;
     background-position-y: 19px;
   }
 
@@ -16,7 +16,7 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content min-content 1fr;
     max-width: $bp-desk-small;
-    min-height: 570px;
+    min-height: 569px;
     margin-bottom: 104px;
     padding-top: 112px;
     padding-bottom: 0;
@@ -34,7 +34,7 @@
       display: inline-block;
       width: 47px;
       height: 81px;
-      margin-left: -50px;
+      margin: -1px 0 1px -50px;
       background: url("../img/icon-flag.svg") no-repeat left center;
       background-size: auto 81px;
     }
@@ -44,10 +44,10 @@
     grid-row: 1/1;
     grid-column: 1;
     display: flex;
-    padding: 55px 50px 0;
+    padding: 54px 50px 0;
 
     &::after {
-      background-position: 13px 7px;
+      background-position: 13px 8px;
       min-width: 124px;
       height: 105px;
       margin-left: 0;
@@ -63,7 +63,7 @@
   @include bp-tablet {
     display: flex;
     align-items: center;
-    padding-top: 14px;
+    padding-top: 13px;
     font-size: 43px;
     line-height: 50px;
   }

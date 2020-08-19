@@ -8,6 +8,7 @@
 
   @include bp-desktop {
     max-width: $bp-desk-big;
+
     @include gorisontal-center;
   }
 }

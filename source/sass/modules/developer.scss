@@ -7,7 +7,7 @@
   font-weight: bold;
 
   @include bp-only-mobile {
-    height: 80px;
+    min-height: 80px;
   }
 
   @include bp-tablet {
@@ -23,6 +23,10 @@
   @include bp-tablet {
     margin: -8px 0 0;
   }
+
+  @include bp-desktop {
+    margin-right: 1px;
+  }
 }
 
 .developer__text {
@@ -37,11 +41,11 @@
   }
 }
 
-.developer__text:hover+.developer__link .developer__logo {
+.developer__text:hover + .developer__link .developer__logo {
   fill: $tiffany-medium-dark;
 }
 
-.developer__text:active+.developer__link .developer__logo {
+.developer__text:active + .developer__link .developer__logo {
   fill: $tiffany-medium-dark;
   opacity: 0.3;
 }

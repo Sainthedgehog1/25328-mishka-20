@@ -65,7 +65,7 @@
     outline: none;
   }
 
-  &:before {
+  &::before {
     content: "";
     position: absolute;
     top: 27px;
@@ -76,7 +76,7 @@
     background-color: $tiffany-light-medium;
 
     @include bp-tablet {
-      top: 30px;
+      top: 29px;
     }
 
     @include bp-desktop {
@@ -89,12 +89,12 @@
     height: 30px;
   }
 
-  &:hover:before,
-  &:focus:before {
+  &:hover::before,
+  &:focus::before {
     background-color: $tiffany-medium-dark;
   }
 
-  &:active:before {
+  &:active::before {
     background-color: $tiffany-medium-dark-01;
   }
 }

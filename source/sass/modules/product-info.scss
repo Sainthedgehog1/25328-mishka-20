@@ -10,7 +10,7 @@
 
   @include bp-desktop {
     margin-top: 22px;
-    margin-left: 0px;
+    margin-left: 0;
     font-size: 15px;
 
     &--infotable {
@@ -29,19 +29,19 @@
   padding-bottom: 12px;
 
   @include bp-desktop {
-    padding: 5px 0 14px
+    padding: 5px 0 14px;
   }
 }
 
 .product-info__parameter {
-  min-width: 37.6%;
+  width: 37.7%;
 
   @include bp-tablet {
-    min-width: 33.2%;
+    width: 33.3%;
   }
 
   @include bp-desktop {
-    min-width: 33.5%;
+    width: 33.6%;
   }
 }
 

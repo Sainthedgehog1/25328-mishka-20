@@ -1,7 +1,7 @@
 .button {
   display: block;
   width: 100%;
-  padding: 14px 0;
+  padding: 14px 24px 14px 24px;
   text-align: center;
   font-size: 18px;
   line-height: 20px;
@@ -25,7 +25,7 @@
   }
 
   @include bp-tablet {
-    padding: 14px 24px;
+    padding: 15px 24px 13px 24px;
     font-size: 17px;
 
     &--modal-form {
@@ -38,11 +38,11 @@
     padding: 14px 25px 14px 24px;
 
     @include bp-tablet {
-      padding: 14px 25px 14px 23px;
+      padding: 15px 24px 13px 22px;
     }
 
     @include bp-desktop {
-      padding: 14px 24px;
+      padding: 15px 24px 13px 24px;
     }
   }
 
@@ -52,6 +52,7 @@
     color: $white;
     background-color: $tiffany-light-extra;
     border: 2px solid $tiffany-light-extra;
+    cursor: pointer;
 
     &:hover,
     &:focus,
@@ -67,21 +68,15 @@
     }
   }
 
-  &--crutch {
-    @include bp-desktop {
-      padding: 14px 24px 14px 22px;
-    }
-  }
-
   &--slider {
-    padding: 14px 23px 14px 24px;
+    padding: 14px 24px 14px 25px;
 
     @include bp-tablet {
       position: absolute;
-      top: 80px;
+      top: 79px;
       right: 50px;
-      padding: 14px 24px;
       width: 175px;
+      padding: 15px 24px 13px 24px;
     }
 
     @include bp-desktop {
@@ -90,10 +85,12 @@
   }
 }
 
-// page-form
+/* page-catalog */
 
-.page-form .button {
+.page-catalog .button {
+  padding: 14px 0;
+
   @include bp-tablet {
-    padding: 14px 24px;
+    padding: 15px 0 13px;
   }
 }

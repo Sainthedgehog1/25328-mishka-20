@@ -1,27 +1,30 @@
 .review {
   position: relative;
   width: 100%;
-  padding-top: 26px;
+  padding-top: 25px;
   padding-bottom: 45px;
 
   @include bp-tablet {
     min-height: 457px;
-    @include gorisontal-center;
     margin-bottom: 49px;
-    padding-top: 80px;
+    padding-top: 79px;
     padding-bottom: 45px;
-    background: url("../img/review@1x.jpg") no-repeat 0 1px;
+    background: url("../img/review@1x.jpg") no-repeat 0 0;
+
+    @include gorisontal-center;
 
     @include bp-retina-2x {
-      background: url("../img/review@2x.jpg") no-repeat 0 1px;
+      background: url("../img/review@2x.jpg") no-repeat 0 0;
+      background-size: 350px auto;
     }
   }
 
   @include bp-desktop {
     max-width: $bp-desk-small;
     min-height: 458px;
-    @include gorisontal-center;
     padding: 69px 0 45px 174px;
+
+    @include gorisontal-center;
   }
 }
 
@@ -32,10 +35,10 @@
 
 .review__text {
   margin: 0;
-  padding: 14px 0 33px;
+  padding: 14px 0 34px;
 
   @include bp-tablet {
-    padding: 39px 0 61px;
+    padding: 39px 0 60px;
     font-size: 17px;
   }
 
@@ -56,12 +59,13 @@
 
   @include bp-tablet {
     width: 50%;
-    padding: 0 0 3px;
+    padding: 0 0 4px;
     font-size: 18px;
     line-height: 24px;
   }
 
   @include bp-desktop {
+    padding: 0 0 3px;
     font-size: 17px;
     line-height: 24px;
   }

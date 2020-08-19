@@ -17,7 +17,7 @@
   grid-template-columns: 1fr;
   width: 100%;
   padding: 0 0 33px;
-  box-shadow: 0px 0px 0px 1px $white-medium-dark inset;
+  box-shadow: 0 0 0 1px $white-medium-dark inset;
 
   @include bp-tablet {
     box-shadow: none;
@@ -32,7 +32,7 @@
     align-items: center;
     max-width: $bp-desk-small;
     min-height: 455px;
-    box-shadow: 0px 0px 0px 1px $white-medium-dark inset;
+    box-shadow: 0 0 0 1px $white-medium-dark inset;
   }
 }
 
@@ -102,7 +102,7 @@
   line-height: 24px;
 
   @include bp-tablet {
-    padding: 0px 18px 41px 39px;
+    padding: 0 18px 41px 39px;
     font-size: 15px;
     line-height: 30px;
     border-left: 1px solid $white-medium-dark;

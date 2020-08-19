@@ -8,9 +8,10 @@
     display: flex;
     flex-wrap: wrap;
     max-width: 100%;
-    @include gorisontal-center;
     padding-bottom: 26px;
     background-position: 0 3px;
+
+    @include gorisontal-center;
   }
 
   @include bp-desktop {
@@ -45,14 +46,14 @@
   }
 
   @include bp-desktop {
-    margin-top: 39px;
+    margin-top: 40px;
   }
 }
 
 .about-us__list-item {
   display: flex;
   flex-direction: column;
-  padding: 0 0 30px;
+  padding: 0 0 28px;
   font-size: 17px;
   line-height: 20px;
   font-weight: bold;
@@ -62,7 +63,7 @@
     content: "";
     width: 55px;
     height: 39px;
-    margin: 0 0 14px;
+    margin: 0 0 16px;
   }
 
   &:last-child {
@@ -70,35 +71,35 @@
   }
 
   &--ecology::before {
-    margin: 0 0 16px;
+    margin: 0 0 17px;
     background: url("../img/icon-feature-flower.svg") no-repeat 8px 1px;
     background-size: 33px 38px;
   }
 
   &--style::before {
-    background: url("../img/icon-feature-money.svg") no-repeat 0 -1px;
+    background: url("../img/icon-feature-money.svg") no-repeat 0 0;
     background-size: 47px 29px;
   }
 
   &--likes::before {
-    background: url("../img/icon-feature-heart.svg") no-repeat 7px 5px;
+    background: url("../img/icon-feature-heart.svg") no-repeat 7px 6px;
     background-size: 34px 27px;
   }
 
   &--handwork::before {
-    background: url("../img/icon-feature-ball.svg") no-repeat 3px 2px;
+    background: url("../img/icon-feature-ball.svg") no-repeat 3px 3px;
     background-size: 35px 34px;
   }
 
   &--support::before {
-    margin: 0 0 13px -6px;
-    background: url("../img/icon-feature-rocket.svg") no-repeat 0 3px;
+    margin: 0 0 15px -6px;
+    background: url("../img/icon-feature-rocket.svg") no-repeat 0 4px;
     background-size: 55px 23px;
   }
 
   &--gift::before {
-    margin: 0 0 15px;
-    background: url("../img/icon-feature-gift.svg") no-repeat 3px 2px;
+    margin: 0 0 17px;
+    background: url("../img/icon-feature-gift.svg") no-repeat 3px 3px;
     background-size: 33px 32px;
   }
 
@@ -113,6 +114,7 @@
 
     &--ecology {
       order: 1;
+      padding-bottom: 55px;
     }
 
     &--style {
@@ -125,7 +127,7 @@
 
     &--handwork {
       order: 2;
-      padding: 1px 2% 56px 15px;
+      padding: 1px 2% 55px 15px;
     }
 
     &--support {
@@ -146,38 +148,38 @@
     }
 
     &--ecology::before {
-      margin: -2px 0 18px 0;
+      margin: -3px 0 19px 0;
       height: 39px;
       background-size: 33px 38px;
     }
 
     &--handwork::before {
       margin: 0 0 15px;
+      background-position: 3px 1px;
     }
 
     &--style::before {
-      margin: 0 0 15px;
+      margin: 0 0 16px;
       background-position: 1px 0;
     }
 
     &--support::before {
-      margin: 0 0 16px -7px;
+      margin: 0 0 17px -7px;
       background-position: 0 4px;
     }
 
     &--likes::before {
       margin: 0 0 15px;
-      background-position: 8px 6px;
+      background-position: 8px 5px;
     }
 
     &--gift::before {
-      margin: 0 0 16px 0px;
-      background-position: 2px 2px;
+      margin: 0 0 16px 0;
+      background-position: 2px 1px;
     }
   }
 
   @include bp-desktop {
-
     &--handwork,
     &--support,
     &--gift {

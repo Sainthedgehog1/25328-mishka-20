@@ -9,7 +9,7 @@
 
 - Установить Node Modules с проверкой последних обновлений с помощью команды <strong>npm i -g npm-check-updates</strong>
 - Проверить наличие обновлений модулей <strong>ncu</strong>
-- При необходимости установить их <strong>ncu -u</strong>
+- При необходимости установить их <strong>ncu -u</strong>, <strong>npm install</strong>
 - Запуск сборки <strong>gulp start</strong>
 
 **Обратите внимание, что папка с вашими исходными файлами — `source/`.**
