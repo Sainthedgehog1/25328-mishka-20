@@ -24,19 +24,27 @@ navToggle.addEventListener("click", function () {
 var overlay = document.querySelector(".modal-overlay");
 var openModals = document.querySelectorAll(".open-modal");
 var popup = document.querySelector(".modal");
+var buttonModal = document.querySelector(".button--modal-form");
 
-Array.from(openModals).forEach(function (openModal) {
-  openModal.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    overlay.style.display = "block";
+if (openModals) {
+  Array.from(openModals).forEach(function (openModal) {
+    openModal.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      overlay.style.display = "block";
+      popup.classList.toggle("modal--show");
+      buttonModal.focus();
+    });
+  });
+}
+
+/* Закрытие модального окна по клику на overlay */
+if (overlay) {
+  overlay.addEventListener("click", function () {
+    overlay.style.display = "none";
     popup.classList.toggle("modal--show");
   });
-});
-/* Закрытие модального окна по клику на overlay */
-overlay.addEventListener('click', function () {
-  overlay.style.display = "none";
-  popup.classList.toggle("modal--show");
-});
+}
+
 /* Закрытие модального окна по нажатию на Esc */
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
