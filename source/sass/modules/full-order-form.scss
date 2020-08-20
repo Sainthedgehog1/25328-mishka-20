@@ -391,6 +391,7 @@
 .full-order-form__button {
   padding: 15px 24px 13px 24px;
   font-size: 17px;
+  cursor: pointer;
 
   @include bp-tablet {
     order: -1;
@@ -612,6 +613,7 @@
 .full-order-form__text-input {
   display: flex;
   width: 100%;
+  height: 18px;
   padding: 16px 0 14px;
   border: 1px solid transparent;
   border-bottom: 2px solid $black;
@@ -620,6 +622,7 @@
   font-size: 17px;
   line-height: 18px;
   font-weight: normal;
+  box-sizing: content-box;
 
   &--crutch {
     padding: 14px 0 15px;
@@ -632,9 +635,11 @@
   }
 
   @include bp-tablet {
+    height: 26px;
     padding: 14px 17px 12px 17px;
     font-size: 19px;
     line-height: 18px;
+    box-sizing: content-box;
   }
 
   &--phone {
